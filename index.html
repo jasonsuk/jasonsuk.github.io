@@ -4,76 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&family=Poppins:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
     <title>My Developer Journey</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <p3 class="myBrand"><a href="#" alt="My Brand">My Brand</a></p3>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#web">Web-Development</a></li>
-               <li><a href="#data">Data-Analytics</a></li>
-            </ul>
-        </nav>
+
+    <div class="navbar">
+        <img src="" alt="Logo" class="nav__logo">
+        <div class="nav__toogle">
+            <!-- <input type="checkbox" class="nav__toggle--checkbox" id="nav__toggle">
+            <label for="nav__toggle" class="nav__toggle--label">
+                <span class="nav__toggle--icon">&nbsp;</span>
+            </label>
+    
+            <div class="nav__background">&nbsp;</div>
+    
+            <div class="nav__contents">
+                <ul class="nav__list">
+                    <li class="nav__list-item"><a class="nav__link" href="#about">About Me</a></li>
+                    <li class="nav__list-item"><a class="nav__link" href="#analytics">Data Analytics</a></li>
+                    <li class="nav__list-item"><a class="nav__link" href="#javascript">Mini Projects</a></li>            
+                    <li class="nav__list-item"><a class="nav__link" href="#contacts">Connect with Me!</a></li>
+                </ul>
+            </div> -->
+        </div>        
+    </div>
+    <header class="header">
+        <div class="header__main">
+            <h1 class="heading__primary">
+                <span class="heading__primary--title">My Developer Journey</span>
+                <span class="heading__primary--tagline">Tourism manager dreaming beyond</span>
+            </h1>
+        </div>
     </header>
-    <section class="container" id="home">
-        <h2>Welcome to My Developer Journey</h2>
-        <div class="text-box">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quas possimus cupiditate necessitatibus rerum ea rem magni tempora consequuntur culpa quasi quo ratione maiores dolores iure, sapiente porro. Nulla, voluptas!</p>
-        </div>
-    </section>
-    <section class="container" id="about">
-        <h2>My First Website</h2>
-        <div class="text-box">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dolorum velit eveniet tempora natus eius qui perferendis eum deleniti, odit, quasi in! Illum ullam, perferendis odit nam aliquam rem nisi.</p>
-        </div> 
-    </section>
-    <section class="container" id="web">
-        <div class="card">
-            <h3>HTML</h3>
-            <a href="#"><img src="#" alt=""></a>
-        </div>
-        <div class="card">
-            <h3>CSS</h3>
-            <a href="#"><img src="#" alt=""></a>
-        </div>
-        <div class="card">
-            <h3>JavaScript</h3>
-            <a href="#"><img src="#" alt=""></a>
-        </div>
-    </section>
-    <section class="container" id="data">
-        <div class="card">
-            <h3>Python Data Analytics</h3>
-            <ul>
-                <li class="subject-area">Data Collection</li>
-                <li class="subject-area">Wrangling</li>
-                <li class="subject-area">EDA</li>
-                <li class="subject-area">Visualization</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Math&Statistics</h3>
-            <ul>
-                <li class="subject-area">Descriptive</li>
-                <li class="subject-area">Inferential</li>
-                <li class="subject-area">Bayesian</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Marchine Learning</h3>
-            <ul>
-                <li class="subject-area">Mathmatics</li>
-                <li class="subject-area">Regression</li>
-                <li class="subject-area">Neural Network</li>
-                <li class="subject-area">PCA</li>
-                <li class="subject-area">Clustering</li>
-            </ul>
-    </section>
 
-
+    <script src="script.js"></script>
 </body>
 </html>
