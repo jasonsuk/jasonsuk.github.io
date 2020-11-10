@@ -48,7 +48,7 @@ body {
 .row {
   max-width: 114rem; }
   .row:not(:last-child) {
-    margin-bottom: 8rem; }
+    margin-bottom: 4rem; }
   .row:before, .row:after {
     content: '';
     display: table; }
@@ -103,19 +103,19 @@ body {
 
 .section-about {
   margin-top: 3.5rem;
-  padding: 2.5rem;
+  padding: 3.5rem 2.5rem;
   min-height: 80vh;
   background-color: #fff; }
 
-.about {
-  background-color: #e7dc74;
+.about-now {
+  background-color: #548C2F;
   padding: 1.5rem 2rem;
-  height: 25rem; }
-  .about__text {
+  min-height: 40vh; }
+  .about-now__text {
     color: #333;
     padding: 2.5rem 1rem;
     background-color: #fff; }
-  .about__container {
+  .about-now__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem; }
@@ -135,7 +135,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 15px;
-    transition: all 0.6s ease-out; }
+    transition: all 0.6s ease-out 0.2s; }
     .card__side--back {
       transform: rotateY(180deg);
       text-align: center; }
@@ -157,3 +157,64 @@ body {
     position: absolute;
     opacity: 0.6;
     width: 100%; }
+
+.about-next {
+  background-color: #ffb900;
+  margin-top: -2rem;
+  padding: 1.5rem 2rem;
+  min-height: 40vh; }
+  .about-next__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; }
+
+.block {
+  width: 17rem;
+  min-height: 30rem;
+  background-color: #e7dc74;
+  position: relative; }
+  .block__text {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #333; }
+  .block__fill {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 1rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -3rem;
+    background-color: #fff; }
+    .block__fill > * {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 5rem;
+      color: #333; }
+  .block__image--1 {
+    background-image: url(/assets/svg/undraw_web_developer_p3e5.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%; }
+  .block__image--2 {
+    background-image: url(/assets/svg/undraw_data_trends_b0wg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%; }
+  .block__image--3 {
+    background-image: url(/assets/svg/undraw_Artificial_intelligence_re_enpp.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%; }
+  .block__image--4 {
+    background-image: url(/assets/svg/undraw_Questions_re_1fy7.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%; }

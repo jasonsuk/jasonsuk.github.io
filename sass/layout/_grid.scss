@@ -32,7 +32,7 @@ $gutter-horizonal: 4rem;
     max-width: $grid-width; 
 
     &:not(:last-child) {
-        margin-bottom: $gutter-vertical;
+        margin-bottom: $gutter-vertical-small;
     }
 
     @include clearFix;

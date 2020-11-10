@@ -34,23 +34,24 @@
 
 .section-about {
     margin-top: 3.5rem;
-    padding: 2.5rem;
+    padding: 3.5rem 2.5rem;
     min-height: 80vh;
 
     background-color: $color-white; 
 }
 
-.about {
 
-    background-color: $color-light;
+// ABOUT ME - NOW -> FLIPPING CARD DESIGN
+.about-now {
+
+    background-color: $color-primary-light;
     padding: 1.5rem 2rem;      
-    height: 25rem;     
-
+    min-height: 40vh;
+    
     &__text {
         color: $color-grey-dark-3;
         padding: 2.5rem 1rem;     
         background-color: #fff;
-
     }
 
     &__container {
@@ -81,11 +82,9 @@
 
         border-radius: 15px;
 
-        transition: all 0.6s ease-out;
-    
-        &--front {                    
-         
-        }
+        transition: all 0.6s ease-out 0.2s;
+
+        // &--front {}
 
         &--back {    
             transform: rotateY(180deg);         
@@ -121,3 +120,86 @@
         width: 100%;
     }
 }
+
+
+// ABOUT ME - NEXT -> DRAG & DROP DESIGN (JS to apply)
+.about-next {
+    background-color: $color-secondary-dark;
+    margin-top: -2rem;
+    padding: 1.5rem 2rem;       
+
+    min-height: 40vh;
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;         
+
+        // margin-top: 5rem;
+    }
+}
+
+.block {
+    width: 17rem;
+    min-height: 30rem;
+    background-color: $color-secondary-light;    
+    position: relative;
+    
+
+    &__text {        
+        
+        @include centerBottom;
+        text-align: center;        
+        color: $color-grey-dark-3;
+    }
+
+    &__fill {
+        width: 15rem;
+        height: 15rem;
+        border-radius: 1rem;
+        
+        @include centerObj;      
+        margin-top: -3rem;
+        background-color: #fff;        
+
+        & > * {
+            @include centerObj;  
+            font-size: 5rem;
+            color: $color-grey-dark-3;    
+        }
+    }
+
+
+
+    &__image {
+
+        &--1 {
+            background-image: url(/assets/svg/undraw_web_developer_p3e5.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 90%;    
+        }
+        &--2 {
+            background-image: url(/assets/svg/undraw_data_trends_b0wg.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 90%;    
+        }
+        &--3 {
+            background-image: url(/assets/svg/undraw_Artificial_intelligence_re_enpp.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 90%;    
+        }
+        &--4 {
+            background-image: url(/assets/svg/undraw_Questions_re_1fy7.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 90%;    
+        }
+
+    }
+}
+
+
