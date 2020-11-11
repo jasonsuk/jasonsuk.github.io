@@ -48,3 +48,20 @@ $font-sm: 1rem;
 // BOX SHADOW   
 $default-box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.4);
 $box-shadow-light: 0 0.2rem 1rem 0 rgba(0, 0, 0, 0.2);
+
+
+// MARGINS
+.mt-lg { margin-top: 8rem; }
+.mt-md { margin-top: 6rem; }
+.mt-sm { margin-top: 4rem; }
+.mb-lg { margin-bottom: 8rem; }
+.mb-md { margin-bottom: 6rem; }
+.mb-sm { margin-bottom: 4rem; }
+.mr-lg { margin-right: 8rem; }
+.mr-md { margin-right: 6rem; }
+.mr-sm { margin-right: 4rem; }
+.mr-xs { margin-right: 2rem; }
+.ml-lg { margin-left: 8rem; }
+.ml-md { margin-left: 6rem; }
+.ml-sm { margin-left: 4rem; }
+.ml-xs { margin-left: 2rem; }
