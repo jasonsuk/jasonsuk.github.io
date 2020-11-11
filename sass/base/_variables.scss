@@ -20,6 +20,7 @@
 // COLOR
 $color-primary: #2c5f2d; 
 $color-primary-light: #548C2F; // maximum green
+$color-primary-light-2 : #38A700;
 $color-primary-dark: #104911; // lincoln green
 $color-secondary: #ffe77a;
 $color-secondary-light: #e7dc74;
@@ -42,3 +43,8 @@ $default-font-size: 1.6rem;
 $font-lg: 2rem;
 $font-md: 1.2rem;
 $font-sm: 1rem;
+
+
+// BOX SHADOW   
+$default-box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.4);
+$box-shadow-light: 0 0.2rem 1rem 0 rgba(0, 0, 0, 0.2);

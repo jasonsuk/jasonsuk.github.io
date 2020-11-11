@@ -1,10 +1,18 @@
 @import 'sass/base/variables';
-@import 'sass/base/animation';
 @import 'sass/base/mixin';
-@import 'sass/base/typography';
+
 @import 'sass/base/base';
+@import 'sass/base/animation';
+@import 'sass/base/typography';
+
+@import 'sass/component/button';
+@import 'sass/component/block';
+@import 'sass/component/card';
+@import 'sass/component/popup';
+
 @import 'sass/layout/grid';
 @import 'sass/layout/layout';
+
 
 
 

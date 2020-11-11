@@ -1,0 +1,69 @@
+.block {
+    width: 20rem;
+    min-height: 30rem;
+    background-color: $color-secondary-light;    
+    position: relative;
+        
+    &__link {
+        margin: 4.5rem;
+        width: 25rem;
+        min-height: 40rem;
+        background-color: $color-secondary; 
+        box-shadow: $default-box-shadow;
+    }
+
+    &__text {        
+        
+        @include centerBottom;
+        text-align: center;        
+        color: $color-grey-dark-3;
+    }
+
+    &__fill {
+        width: 15rem;
+        height: 15rem;
+        border-radius: 1rem;
+        
+        @include centerObj;      
+        margin-top: -3rem;
+        background-color: #fff;        
+
+        & > * {
+            @include centerObj;  
+            font-size: 5rem;
+            color: $color-grey-dark-3;    
+        }
+    }
+
+
+    &__image {
+
+        &--1 {
+            background-image: url(/assets/svg/undraw_web_developer_p3e5.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 90%;    
+        }
+        &--2 {
+            background-image: url(/assets/svg/undraw_data_trends_b0wg.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 90%;    
+        }
+        &--3 {
+            background-image: url(/assets/svg/undraw_Artificial_intelligence_re_enpp.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 90%;    
+        }
+        &--4 {
+            background-image: url(/assets/svg/undraw_Questions_re_1fy7.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 90%;    
+        }
+
+    }
+}
+
+

@@ -16,20 +16,8 @@
 #2C6E49 // dark spring green
 #4C956C // green cyan
 */
-.heading__primary {
-  color: #eee;
-  width: 100%;
-  padding: 1.5rem 2.5rem;
-  margin: -1rem;
-  background-color: #548C2F; }
-  .heading__primary--title {
-    display: block; }
-  .heading__primary--tagline {
-    display: block;
-    font-size: 1.6rem; }
-
 *,
-*::before
+*::before,
 *::after {
   margin: 0;
   padding: 0;
@@ -43,137 +31,89 @@ body {
   padding: 3rem;
   min-height: 100vh;
   background-color: #fafaed;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  letter-spacing: 1px; }
 
-.row {
-  max-width: 114rem; }
-  .row:not(:last-child) {
-    margin-bottom: 4rem; }
-  .row:before, .row:after {
-    content: '';
-    display: table; }
-  .row:after {
+.hidden {
+  opacity: 0;
+  visibility: hidden; }
+
+.show {
+  opacity: 1;
+  visibility: visible; }
+
+.heading__primary {
+  color: #eee;
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #548C2F; }
+  .heading__primary--title {
     display: block;
-    clear: both;
-    height: 1px;
-    margin-top: -1px;
-    visibility: hidden; }
-  .row {
-    *zoom: 1; }
-  .row [class^='col-'] {
-    float: left; }
-    .row [class^='col-']:not(:last-child) {
-      margin-right: 4rem; }
-  .row .col-1-of-2,
-  .row .col-2-of-4 {
-    width: calc( (100% - 4rem) / 2); }
-  .row .col-1-of-3 {
-    width: calc( ( 100% - 2 * 4rem) / 3); }
-  .row .col-2-of-3 {
-    width: calc( 2 * ( ( 100% - 2 * 4rem) / 3 ) + 4rem); }
-  .row .col-1-of-4 {
-    width: calc( ( 100% - 3 * 4rem) / 4); }
-  .row .col-3-of-4 {
-    width: calc( ( 3 * ( 100% - 3 * 4rem) / 4 ) + ( 2 * 4rem )); }
+    text-transform: uppercase;
+    margin-bottom: 1.5rem; }
+  .heading__primary--tagline {
+    display: block;
+    font-size: 1.6rem; }
 
-.navbar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 4.5rem;
+.heading__secondary {
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 1.5rem auto;
+  margin-bottom: 4rem; }
+
+.heading__tertiary {
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 1.5rem auto;
+  margin-bottom: 4rem; }
+
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+
+.btn--brand {
   background-color: #2c5f2d;
-  z-index: 10000; }
+  color: #fff; }
 
-.header {
-  width: 100%;
-  margin-top: 3.5rem;
-  height: 85vh;
-  background-image: url(..//assets/diary2-kelly-sikkema-unsplash.jpg);
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  opacity: 0.8;
-  position: relative; }
-  .header__main {
-    position: absolute;
-    left: 50%;
-    top: 45%;
-    transform: translate(-50%, -50%); }
-
-.section-about {
-  margin-top: 3.5rem;
-  padding: 3.5rem 2.5rem;
-  min-height: 80vh;
-  background-color: #fff; }
-
-.about-now {
-  background-color: #548C2F;
-  padding: 1.5rem 2rem;
-  min-height: 40vh; }
-  .about-now__text {
-    color: #333;
-    padding: 2.5rem 1rem;
-    background-color: #fff; }
-  .about-now__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem; }
-
-.card {
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  cursor: pointer;
+  border: none;
+  /* FOR ::after */
   position: relative;
-  -webkit-perspective: 1000;
-  perspective: 1000; }
-  .card__side {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    width: 100%;
-    height: 25rem;
-    background-color: #fafaed;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    transition: all 0.6s ease-out 0.2s; }
-    .card__side--back {
-      transform: rotateY(180deg);
-      text-align: center; }
-  .card:hover .card__side--front {
-    transform: rotateY(-180deg); }
-  .card:hover .card__side--back {
-    transform: rotateY(0); }
-  .card__heading {
-    width: 90%;
-    color: #fff;
-    text-align: center;
-    z-index: 100;
-    background: #2c5f2d; }
-  .card__para {
-    color: #777;
-    text-align: center;
-    z-index: 100; }
-  .card__image {
-    position: absolute;
-    opacity: 0.6;
-    width: 100%; }
+  transition: all 0.2s; }
 
-.about-next {
-  background-color: #ffb900;
-  margin-top: -2rem;
-  padding: 1.5rem 2rem;
-  min-height: 40vh; }
-  .about-next__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center; }
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.4); }
+
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.2rem 1rem 0 rgba(0, 0, 0, 0.2); }
+
+.btn__link {
+  color: #000;
+  display: inline-block; }
 
 .block {
-  width: 17rem;
+  width: 20rem;
   min-height: 30rem;
   background-color: #e7dc74;
   position: relative; }
+  .block__link {
+    margin: 4.5rem;
+    width: 25rem;
+    min-height: 40rem;
+    background-color: #ffe77a;
+    box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.4); }
   .block__text {
     position: absolute;
     left: 50%;
@@ -218,3 +158,180 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 90%; }
+
+.card {
+  position: relative;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  width: 25rem;
+  height: 25rem;
+  overflow: hidden;
+  background-color: #fafaed;
+  border-radius: 15px;
+  box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.4); }
+  .card:not(:last-child) {
+    margin-right: 2.5rem;
+    margin-bottom: 2.5rem; }
+  .card__side {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 25rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: all 0.6s ease-out 0.2s; }
+    .card__side--back {
+      transform: rotateY(180deg);
+      text-align: left;
+      padding: 0 1.5rem; }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__heading {
+    width: 90%;
+    color: #fff;
+    text-align: center;
+    z-index: 100;
+    background: #2c5f2d; }
+  .card__para {
+    color: #777;
+    text-align: center;
+    z-index: 100; }
+  .card__image {
+    position: absolute;
+    opacity: 0.6;
+    width: 100%; }
+
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(0.3rem);
+  -webkit-backdrop-filter: blur(0.3rem); }
+  .popup__container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80rem;
+    min-height: 30rem;
+    background-color: #e7dc74;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .popup__container > *:not(:last-child) {
+      margin-bottom: 3.5rem; }
+  .popup__text {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem; }
+
+.row {
+  max-width: 114rem; }
+  .row:not(:last-child) {
+    margin-bottom: 4rem; }
+  .row:before, .row:after {
+    content: '';
+    display: table; }
+  .row:after {
+    display: block;
+    clear: both;
+    height: 1px;
+    margin-top: -1px;
+    visibility: hidden; }
+  .row {
+    *zoom: 1; }
+  .row [class^='col-'] {
+    float: left; }
+    .row [class^='col-']:not(:last-child) {
+      margin-right: 2rem; }
+  .row .col-1-of-2,
+  .row .col-2-of-4 {
+    width: calc( (100% - 4rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc( ( 100% - 2 * 4rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc( 2 * ( ( 100% - 2 * 4rem) / 3 ) + 4rem); }
+  .row .col-1-of-4 {
+    width: calc( ( 100% - 3 * 4rem) / 4); }
+  .row .col-3-of-4 {
+    width: calc( ( 3 * ( 100% - 3 * 4rem) / 4 ) + ( 2 * 4rem )); }
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 4.5rem;
+  background-color: #2c5f2d;
+  z-index: 10000; }
+
+.header {
+  width: 100%;
+  margin-top: 3.5rem;
+  height: 85vh;
+  background-image: url(..//assets/diary2-kelly-sikkema-unsplash.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  position: relative; }
+  .header__main {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%); }
+
+.section-about {
+  margin: 8rem auto;
+  padding: 0em 2.5rem;
+  min-height: 75vh;
+  overflow: hidden; }
+
+.about__desc {
+  margin: 4.5rem 5.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40rem;
+  height: 50rem;
+  box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.4); }
+
+.about__image {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  opacity: 0.9; }
+
+.about__para {
+  padding: 1.5rem 2.5rem;
+  background-color: #fafaed;
+  color: #333; }
+
+.about__content {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-wrap: wrap; }
+
+.section-web {
+  margin: 8rem auto;
+  padding: 3.5rem 2.5rem;
+  min-height: 75vh;
+  background-color: #fff; }
+
+.web__contents {
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center; }

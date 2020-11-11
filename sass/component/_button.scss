@@ -1,0 +1,46 @@
+.btn {
+
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+    }
+
+    &--brand {
+        background-color: $color-primary;
+        color: $color-white;
+    }
+
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 1.5rem;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+
+        cursor: pointer;
+        border: none;
+
+        /* FOR ::after */
+        position: relative;
+        transition: all 0.2s;
+    }
+
+    &:hover {                     
+        transform: translateY(-0.3rem);
+        box-shadow: $default-box-shadow;        
+    }
+
+    &:active {
+        transform: translateY(-0.1rem);
+        box-shadow: $box-shadow-light;
+    }
+
+
+    &__link {
+        color: $color-black;
+        display: inline-block;
+    }
+}

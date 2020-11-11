@@ -33,173 +33,68 @@
 }
 
 .section-about {
-    margin-top: 3.5rem;
+    margin: 8rem auto;
+    padding: 0em 2.5rem;
+    min-height: 75vh;
+
+    // background-image: url(/assets/bali-geio-tischler-unsplash.jpg);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: top;
+
+    overflow: hidden; 
+}
+
+// ABOUT ME -> FLIPPING CARD DESIGN
+.about {
+    &__desc {
+        margin: 4.5rem 5.5rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;                   
+        width: 40rem;     
+        height: 50rem;
+        box-shadow: $default-box-shadow;
+    }
+
+    &__image {     
+        width: 100%;   
+        height: 75%;
+        object-fit: cover;        
+        // border-radius: 10px;
+        opacity: 0.9;        
+    }
+
+    &__para {        
+        padding: 1.5rem 2.5rem;
+        background-color: $color-bg;
+        color: $color-grey-dark-3;
+        // border-radius: 10px;
+    }
+
+    &__content {    
+        margin-top: 3.5rem;    
+        display: flex;        
+        flex-wrap: wrap;
+    }
+}
+
+.section-web {
+    margin: 8rem auto;
     padding: 3.5rem 2.5rem;
-    min-height: 80vh;
+    min-height: 75vh;
 
     background-color: $color-white; 
 }
 
-
-// ABOUT ME - NOW -> FLIPPING CARD DESIGN
-.about-now {
-
-    background-color: $color-primary-light;
-    padding: 1.5rem 2rem;      
-    min-height: 40vh;
-    
-    &__text {
-        color: $color-grey-dark-3;
-        padding: 2.5rem 1rem;     
-        background-color: #fff;
-    }
-
-    &__container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 2rem;
-    }
-}
-
-.card { 
-    position: relative;    
-    -webkit-perspective: 1000;
-    perspective: 1000;
-
-    &__side {        
-        
-        -webkit-backface-visibility: hidden; 
-        backface-visibility: hidden;
-
-        width: 100%;
-        height: 25rem;
-        background-color: $color-bg;
-        
-        position: absolute;    
-        display: flex;
-        justify-content: center;    
-        align-items: center;
-
-        border-radius: 15px;
-
-        transition: all 0.6s ease-out 0.2s;
-
-        // &--front {}
-
-        &--back {    
-            transform: rotateY(180deg);         
-            text-align: center;               
-        }
-    }
-                    
-    &:hover &__side--front {
-        transform: rotateY(-180deg);
-    }
-
-    &:hover &__side--back {
-        transform: rotateY(0);
-    }
-    
-    &__heading {    
-        width: 90%;             
-        color: $color-white;
-        text-align: center;    
-        z-index: 100;       
-        background: $color-primary;         
-    }
-
-    &__para {    
-        color: $color-grey-dark;
-        text-align: center;    
-        z-index: 100;                
-    }
-
-    &__image {
-        position: absolute;
-        opacity: 0.6;
-        width: 100%;
-    }
-}
-
-
-// ABOUT ME - NEXT -> DRAG & DROP DESIGN (JS to apply)
-.about-next {
-    background-color: $color-secondary-dark;
-    margin-top: -2rem;
-    padding: 1.5rem 2rem;       
-
-    min-height: 40vh;
-
-    &__container {
+// WEB -> DRAG & DROP DESIGN (JS to apply)
+.web {    
+    &__contents {    
+        margin-top: 5rem;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;         
-
-        // margin-top: 5rem;
+        justify-content: space-around;
+        align-items: center;        
     }
 }
-
-.block {
-    width: 17rem;
-    min-height: 30rem;
-    background-color: $color-secondary-light;    
-    position: relative;
-    
-
-    &__text {        
-        
-        @include centerBottom;
-        text-align: center;        
-        color: $color-grey-dark-3;
-    }
-
-    &__fill {
-        width: 15rem;
-        height: 15rem;
-        border-radius: 1rem;
-        
-        @include centerObj;      
-        margin-top: -3rem;
-        background-color: #fff;        
-
-        & > * {
-            @include centerObj;  
-            font-size: 5rem;
-            color: $color-grey-dark-3;    
-        }
-    }
-
-
-
-    &__image {
-
-        &--1 {
-            background-image: url(/assets/svg/undraw_web_developer_p3e5.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 90%;    
-        }
-        &--2 {
-            background-image: url(/assets/svg/undraw_data_trends_b0wg.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 90%;    
-        }
-        &--3 {
-            background-image: url(/assets/svg/undraw_Artificial_intelligence_re_enpp.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 90%;    
-        }
-        &--4 {
-            background-image: url(/assets/svg/undraw_Questions_re_1fy7.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 90%;    
-        }
-
-    }
-}
-
-

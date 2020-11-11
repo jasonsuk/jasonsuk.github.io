@@ -1,18 +1,41 @@
 .heading__primary {
 
     color: $color-grey-light-2;
+    
     width: 100%;
-    padding: 1.5rem 2.5rem;    
-    margin: -1rem;
+    padding: 1.5rem;    
+    
     background-color: $color-primary-light;
 
     &--title {
         display: block;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
     }
 
     &--tagline {
         display: block;
         font-size: $default-font-size;
     }
+}
+
+.heading__secondary {
+    
+    color: $color-grey-dark-3;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding: 1.5rem auto;    
+    margin-bottom: 4rem;
+    
+}
+
+.heading__tertiary {
+    
+    color: $color-grey-dark-3;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding: 1.5rem auto;    
+    margin-bottom: 4rem;
+    
 }
 

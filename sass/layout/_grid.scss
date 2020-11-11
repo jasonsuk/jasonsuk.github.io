@@ -4,7 +4,7 @@ $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-vertical-small: 4rem;
 $gutter-horizonal: 4rem;
-$gutter-horizonal: 4rem;
+$gutter-horizonal-small: 2rem;
 
 // MIXIN - CLEARFIX
 @mixin clearFix(){
@@ -40,7 +40,7 @@ $gutter-horizonal: 4rem;
     [class^='col-'] {
         float: left;
         &:not(:last-child) {
-            margin-right: $gutter-horizonal;
+            margin-right: $gutter-horizonal-small;
         }
     }
 

@@ -1,5 +1,5 @@
 *,
-*::before
+*::before,
 *::after {
     margin: 0;
     padding: 0;
@@ -8,7 +8,7 @@
 
 html {
     font-size: 62.5%;
-
+        
     // MEDIA QUERY
 
 }
@@ -19,6 +19,21 @@ body {
     min-height: 100vh;
     background-color: $color-bg;
     font-size: $default-font-size;
+    line-height: 2.5rem;
+    letter-spacing: 1px;
     
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    // width: 0;
+}
+
+
+.show {
+    opacity: 1;
+    visibility: visible;
+    // width: 0;
 }
 
