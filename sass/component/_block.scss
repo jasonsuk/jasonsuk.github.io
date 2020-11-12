@@ -1,8 +1,23 @@
+// WEB -> DRAG & DROP DESIGN (JS to apply)
 .block {
+
+    &__container {    
+        margin-top: 2.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;        
+        }
+    
+    // BLOCK ITEMS 
     width: 20rem;
     min-height: 30rem;
     background-color: $color-secondary-light;    
-    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
         
     &__link {
         margin: 4.5rem;
@@ -12,11 +27,11 @@
         box-shadow: $default-box-shadow;
     }
 
-    &__text {        
-        
-        @include centerBottom;
+    &__text {                
+        margin-top: 2.5rem;        
         text-align: center;        
-        color: $color-grey-dark-3;
+        color: $color-grey-dark-3;        
+        max-width: 20rem;
     }
 
     &__fill {
@@ -24,9 +39,9 @@
         height: 15rem;
         border-radius: 1rem;
         
-        @include centerObj;      
-        margin-top: -3rem;
-        background-color: #fff;        
+        position: relative;
+        margin-top: -3rem;         
+        background-color: $color-bg;         
 
         & > * {
             @include centerObj;  
@@ -38,29 +53,29 @@
 
     &__image {
 
-        &--1 {
-            background-image: url(/assets/svg/undraw_web_developer_p3e5.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 90%;    
+        &--1 {           
+            background: 
+                $color-white url(/assets/svg/undraw_web_developer_p3e5.svg) 
+                center / 90% 
+                no-repeat;           
         }
         &--2 {
-            background-image: url(/assets/svg/undraw_data_trends_b0wg.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 90%;    
+            background: 
+                $color-white url(/assets/svg/undraw_data_trends_b0wg.svg) 
+                center / 90% 
+                no-repeat;            
         }
         &--3 {
-            background-image: url(/assets/svg/undraw_Artificial_intelligence_re_enpp.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 90%;    
+            background: 
+                $color-white url(/assets/svg/undraw_Artificial_intelligence_re_enpp.svg) 
+                center / 90% 
+                no-repeat;            
         }
         &--4 {
-            background-image: url(/assets/svg/undraw_Questions_re_1fy7.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 90%;    
+            background: 
+                $color-white url(/assets/svg/undraw_Questions_re_1fy7.svg) 
+                center / 90% 
+                no-repeat;
         }
 
     }

@@ -9,7 +9,6 @@
     z-index: 10000;
 }
 
-
 .header {
 
     width: 100%;
@@ -35,14 +34,10 @@
 .section-about {
     margin: 8rem auto;
     padding: 0em 2.5rem;
-    min-height: 75vh;
-
-    // background-image: url(/assets/bali-geio-tischler-unsplash.jpg);
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: top;
+    min-height: 85vh;
 
     overflow: hidden; 
+    // background-color: $color-grey-light-1;
 }
 
 // ABOUT ME -> FLIPPING CARD DESIGN
@@ -83,28 +78,94 @@
 .section-web {
     margin: 8rem auto;
     padding: 3.5rem 2.5rem;
-    min-height: 75vh;
+    min-height: 85vh;
 
-    background-color: $color-white; 
+    // background-color: $color-white; 
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-primary-light, 0.9)
+        , rgba($color-primary, 0.9)
+    );
 }
-
-// WEB -> DRAG & DROP DESIGN (JS to apply)
-.web {    
-    &__contents {    
-        margin-top: 5rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;        
-    }
-}
-
-// DATA -> SIMPLE MOVING BOX
 
 .section-data {
     margin: 8rem auto;
     padding: 3.5rem 2.5rem;
-    min-height: 75vh;
+    min-height: 85vh;
 
     background-color: $color-white; 
 }
+
+// CONTACT PAGE
+.section-contact {
+    margin: 8rem auto;
+    padding: 3.5rem 2.5rem;
+    min-height: 75vh;
+    // background-color: $color-white;     
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-secondary-light, 0.8), 
+        rgba($color-secondary, 0.8)
+    );
+
+    position: relative;
+}
+
+.contact {
+
+    &__container {
+
+        @include centerObj;
+        margin-top: 3.5rem;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__link {
+        text-align: center;
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 5rem;    
+            
+        }     
+    }
+
+    &__icon {
+        font-size: 10rem;
+        color: $color-primary;
+    }
+
+    &__text {
+
+    }
+}
+
+.inactive {
+
+    &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        font-size: 5rem;        
+        left: -15px;
+        top: -5px;
+        border-radius: 50%;            
+    }
+}
+
+
+// FOOTER
+.footer {    
+    margin: 8rem -3rem -3rem -3rem;     
+    padding: 3.5rem 2.5rem;
+    min-height: 1.5rem;
+    color: $color-grey-light-1;
+    text-align: center;
+
+    background-color: $color-grey-dark-3; 
+}
+
+

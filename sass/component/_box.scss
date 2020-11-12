@@ -21,10 +21,10 @@
         padding: 2.5rem 1.5rem;
 
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-between;
 
-        background-image: linear-gradient(105deg, rgba($color-primary-light, 0.8) 0%, rgba($color-primary, 0.8) 35%, rgba($color-white, 1) 35%);
+        background-image: linear-gradient(105deg, rgba($color-primary-light, 0.8) 0%, rgba($color-primary, 0.8) 32.5%, rgba($color-white, 1) 32.5%);
         background-size: cover;
 
         color: $color-grey-light-2;
@@ -34,27 +34,52 @@
         }
     }
 
-    // TOP PART : IMAGE INSIDE THE BOX 
+    // HEADER PART : TITLE INSIDE THE BOX 
+    &__header {
+        flex: 0 0 35%;   
+        height: 100%;
+
+        
+    }
+
     &__image {
-        flex: 0 0 40%;        
+        &--1 {
+            background: url(/assets/svg/undraw_data_trends_b0wg.svg) center / contain no-repeat;        
+        }
+        &--2 {
+            background: url(/assets/svg/undraw_data_report_bi6l.svg) center / contain no-repeat;        
+        }
+        &--3 {
+            background: url(/assets/svg/undraw_Artificial_intelligence_re_enpp.svg) center bottom / contain no-repeat;        
+        }
     }
 
-    &__title {
-
+    &__title {        
+        text-transform: uppercase;
     }
 
-    &__tagline {
-
+    &__tagline {    
+        background: $color-primary-dark;        
+        text-transform: lowercase;
+        padding: 0.2rem 0.5rem;        
     }
 
-    // BOTTOM PART : IMAGE INSIDE THE BOX 
+    // CONTENT PART 
+
+    &__content {
+        display: flex;       
+        flex: 1;         
+    }
+
     &__list {
 
-        flex: 0 0 45%;
-        list-style: none;        
+        flex: 0 0 70%;
+        list-style: none;    
+        padding: 0 2.5rem;    
 
         &--item {
-            overflow-x: hidden;       
+            overflow-x: hidden;     
+            font-size: $default-font-size;  
         }
 
         &--icon {
@@ -72,6 +97,17 @@
     &__link {
 
         flex: 1;
+        color: $color-grey-dark-3;    
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__text {
+        text-transform: lowercase;
     }
 
 }

@@ -50,14 +50,14 @@
     
     &__heading {    
         width: 90%;             
-        color: $color-white;
+        color: $color-grey-light-1;
         text-align: center;    
         z-index: 100;       
-        background: $color-primary;         
+        background: $color-primary-dark;         
     }
 
     &__para {    
-        color: $color-grey-dark;
+        color: $color-grey-light-1;
         text-align: center;    
         z-index: 100;               
     }

@@ -12,10 +12,13 @@
     -webkit-backdrop-filter: blur(0.3rem);
 
     &__container {
-
+    
+        width: 80%;
         @include centerObj;
+    }
 
-        width: 80rem;
+    &__contents {
+        position: relative;
         min-height: 30rem;
         background-color: $color-secondary-light;
         display: flex;
@@ -24,13 +27,32 @@
         align-items: center;
 
         & > *:not(:last-child) {
-            margin-bottom: 3.5rem;
+            margin-bottom: 3.5rem;            
         }
     }
 
     &__text {
-        display: flex;
+        position: relative;
+        display: flex;        
         align-items: center;
         font-size: $default-font-size;
+        text-transform: lowercase;
     }
+
+    &__link {        
+
+        width: 15rem;
+        display: flex;      
+        justify-content: space-between;  
+        align-items: center;
+    }
+
+    &__close {
+        position: absolute;
+        right: 2.5rem;
+        top: 2.5rem;
+        font-size: 3.5rem;
+        color: $color-grey-dark;
+    }
+
 }

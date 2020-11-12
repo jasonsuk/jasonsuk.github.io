@@ -10,7 +10,6 @@
     <title>My Developer Journey</title>
 </head>
 <body>
-
     <div class="navbar">
         <img src="" alt="Logo" class="nav__logo">
         <div class="nav__toogle">
@@ -41,6 +40,7 @@
     </header>
 
     <section class="section-about">        
+        
         <div class="row">            
             <div class="col-1-of-2">                
                 <div class="about__desc">                    
@@ -95,37 +95,45 @@
     </section>
 
     <section class="section-web">
-        <div class="web__contents">                       
+        <div class="header__section">
+            <h1 class="heading__primary">
+                <span class="heading__primary--title">Web Development</span>
+                <span class="heading__primary--tagline">I have built some build mini applications!</span>
+            </h1>
+        </div>
+        <div class="block__container">                       
             <div class="block">
                 <div class="block__fill block__image--1"></div>   
-                <h3 class="block__text">Web Development</h3>                     
+                <h3 class="block__text">Coundown</h3>                     
             </div>
             <div class="block">
                 <div class="block__fill block__image--2"></div>    
-                <h3 class="block__text">Data Analytics</h3>                                         
+                <h3 class="block__text">Speed Typer</h3>                                         
             </div>
             <div class="block block__link">
                 <div class="block__fill">
                     <i class="fa fa-plus"></i>
                 </div>      
-                <h3 class="block__text">Drop my skill here to see my work!</h3>                                          
+                <h3 class="block__text">Drag & Drop a block here to see my work!</h3>                                          
             </div> 
             <div class="block">
                 <div class="block__fill block__image--3"></div>       
-                <h3 class="block__text">Machine Learning</h3>                                                          
+                <h3 class="block__text">Hangman</h3>                                                          
             </div>                          
             <div class="block">
                 <div class="block__fill block__image--4"></div>    
-                <h3 class="block__text">&nbsp;</h3>                        
+                <h3 class="block__text">Meal finder</h3>                        
             </div>                 
         </div>     
         <div class="popup hidden">
             <div class="popup__container">
-                <h3 class="heading__tertiary">Click the link to see my work!</h3>                
-                <a href="" class="btn btn--brand">Click Me!</a>
-                <small class="popup__text">More works available on my&nbsp;&nbsp;                     
-                    <a class="btn__link" href="https://github.com/jasonsuk"><i class="fab fa-github fa-2x"></i></a>                    
-                </small>
+                <div class="popup__contents">
+                    <h3 class="heading__tertiary">Click the link to see my work!</h3>                
+                    <a href="" class="btn btn--brand">Click Me!</a>
+                    <small class="popup__text">More works available on my&nbsp;&nbsp;                     
+                        <a class="btn__link" href="https://github.com/jasonsuk"><i class="fab fa-github fa-2x"></i></a>                    
+                    </small>
+                </div>
             </div>
         </div> 
     </section>
@@ -141,7 +149,7 @@
         
         <div class="box__container">            
             <div class="box__item">
-                <div class="box__image">
+                <div class="box__header box__image--1">
                     <h1 class="box__title">
                         Business Intelligence
                     </h1>
@@ -149,33 +157,31 @@
                         Advanced Excel, SQL, Tableau
                     </small>
                 </div>
-                <ul class="box__list">
-                    <li class="box__list--item">
-                        <i class="fas fa-check-circle box__list--icon"></i>
-                        <span class="box__list--text">Business Analytics Nano Degree (Udacity)</span>
-                    </li>
-                    <li class="box__list--item">
-                        <i class="fas fa-check-circle box__list--icon"></i>
-                        <span class="box__list--text">Advanced SQL + MySQL for Analytics & Business Intelligence (Udemy)</span>
-                    </li>
-                    <li class="box__list--item">
-                        <i class="fas fa-arrow-circle-right box__list--icon"></i>
-                        <span class="box__list--text">The Complete Python/PostgreSQL Course 2.0 (Udemy)</span>
-                    </li>
-                    <li class="box__list--item">
-                        <i class="fas fa-check-circle box__list--icon"></i>
-                        <span class="box__list--text"></span>
-                    </li>
-                </ul>
-                <div class="box__link">                          
-                    <a href="" class="btn btn--brand">Click Me!</a>
-                    <small class="popup__text">More works available on my&nbsp;&nbsp;                     
-                        <a class="btn__link" href="https://github.com/jasonsuk"><i class="fab fa-github fa-2x"></i></a>                    
-                    </small>
+                <div class="box__content">
+                    <ul class="box__list">
+                        <li class="box__list--item">
+                            <i class="fas fa-check-circle box__list--icon"></i>
+                            <span class="box__list--text">Business Analytics Nano Degree (Udacity)</span>
+                        </li>
+                        <li class="box__list--item">
+                            <i class="fas fa-check-circle box__list--icon"></i>
+                            <span class="box__list--text">Advanced SQL + MySQL for Analytics & Business Intelligence (Udemy)</span>
+                        </li>
+                        <li class="box__list--item">
+                            <i class="fas fa-arrow-circle-right box__list--icon"></i>
+                            <span class="box__list--text">The Complete Python/PostgreSQL Course 2.0 (Udemy)</span>
+                        </li>                   
+                    </ul>
+                    <div class="box__link">                          
+                        <a href="https://github.com/jasonsuk/data-analytics/tree/master/business-analytics-projects" target="_blank" class="btn btn--brand">Click Me!</a>
+                        <small class="box__text">To see my works on&nbsp
+                            <i class="fab fa-github fa-1x"></i>                    
+                        </small>
+                    </div>
                 </div>
             </div> 
             <div class="box__item">
-                <div class="box__image">
+                <div class="box__header box__image--2">
                     <h1 class="box__title">
                         Data Analytics
                     </h1>
@@ -183,33 +189,35 @@
                         Data Wrangling, visulization with Python, statistics
                     </small>
                 </div>
-                <ul class="box__list">
-                    <li class="box__list--item">
-                        <i class="fas fa-check-circle box__list--icon"></i>
-                        <span class="box__list--text">Python A-Z™: Python For Data Science With Real Exercises! (Udemy)</span>
-                    </li>
-                    <li class="box__list--item">                        
-                        <i class="fas fa-check-circle  box__list--icon"></i>
-                        <span class="box__list--text">The Complete Pandas Bootcamp 2020: Data Science with Python (Udemy)</span>
-                    </li>
-                    <li class="box__list--item">
-                        <i class="fas fa-check-circle  box__list--icon"></i>
-                        <span class="box__list--text">Data Analytics Nano Degree (Udacity)</span>
-                    </li>
-                    <li class="box__list--item">
-                        <i class="fas fa-arrow-circle-right box__list--icon"></i>
-                        <span class="box__list--text">Customer Analytics in Python 2020 (Udemy)</span>
-                    </li>
-                </ul>
-                <div class="box__link">                          
-                    <a href="" class="btn btn--brand">Click Me!</a>
-                    <small class="popup__text">More works available on my&nbsp;&nbsp;                     
-                        <a class="btn__link" href="https://github.com/jasonsuk"><i class="fab fa-github fa-2x"></i></a>                    
-                    </small>
+                <div class="box__content">
+                    <ul class="box__list">
+                        <li class="box__list--item">
+                            <i class="fas fa-check-circle box__list--icon"></i>
+                            <span class="box__list--text">Python A-Z™: Python For Data Science With Real Exercises! (Udemy)</span>
+                        </li>
+                        <li class="box__list--item">                        
+                            <i class="fas fa-check-circle  box__list--icon"></i>
+                            <span class="box__list--text">The Complete Pandas Bootcamp 2020: Data Science with Python (Udemy)</span>
+                        </li>
+                        <li class="box__list--item">
+                            <i class="fas fa-check-circle  box__list--icon"></i>
+                            <span class="box__list--text">Data Analytics Nano Degree (Udacity)</span>
+                        </li>
+                        <li class="box__list--item">
+                            <i class="fas fa-arrow-circle-right box__list--icon"></i>
+                            <span class="box__list--text">Customer Analytics in Python 2020 (Udemy)</span>
+                        </li>
+                    </ul>
+                    <div class="box__link">                          
+                        <a href="https://github.com/jasonsuk/data-analytics/tree/master/data-analytics-projects" target="_blank" class="btn btn--brand">Click Me!</a>
+                        <small class="box__text">To see my works on&nbsp
+                            <i class="fab fa-github fa-1x"></i>                    
+                        </small>
+                    </div>
                 </div>
             </div> 
             <div class="box__item">
-                <div class="box__image">
+                <div class="box__header box__image--3">
                     <h1 class="box__title">
                         Machine learning
                     </h1>
@@ -217,31 +225,81 @@
                         Regression, clustering, and more
                     </small>
                 </div>
-                <ul class="box__list">
-                    <li class="box__list--item">
-                        <i class="fas fa-check-circle box__list--icon"></i>
-                        <span class="box__list--text">Andrew Ng's Machine Learning (Coursera)</span>
-                    </li>                    
-                    <li class="box__list--item">
-                        <i class="fas fa-arrow-circle-right box__list--icon"></i>
-                        <span class="box__list--text">Mathematics for Machine Learning Specialization (Coursera)</span>
-                    </li>
-                    <li class="box__list--item">
-                        <i class="fas fa-arrow-circle-right box__list--icon">Hands-On Machine Learning with Scikit-Learn Keras & TensorFlow (Book)</i>
-                        <span class="box__list--text"></span>
-                    </li>
-                </ul>
-                <div class="box__link">                          
-                    <a href="" class="btn btn--brand">Click Me!</a>
-                    <small class="popup__text">More works available on my&nbsp;&nbsp;                     
-                        <a class="btn__link" href="https://github.com/jasonsuk"><i class="fab fa-github fa-2x"></i></a>                    
-                    </small>
+                <div class="box__content">
+                    <ul class="box__list">
+                        <li class="box__list--item">
+                            <i class="fas fa-check-circle box__list--icon"></i>
+                            <span class="box__list--text">Andrew Ng's Machine Learning (Coursera)</span>
+                        </li>                    
+                        <li class="box__list--item">
+                            <i class="fas fa-arrow-circle-right box__list--icon"></i>
+                            <span class="box__list--text">Mathematics for Machine Learning Specialization (Coursera)</span>
+                        </li>
+                        <li class="box__list--item">
+                            <i class="fas fa-arrow-circle-right box__list--icon"></i>
+                            <span class="box__list--text">Hands-On Machine Learning with Scikit-Learn Keras & TensorFlow (Book)</span>
+                        </li>
+                    </ul>
+                    <div class="box__link">                          
+                        <a href="https://github.com/jasonsuk/machine-learning" target="_blank" class="btn btn--brand">Click Me!</a>
+                        <small class="box__text">To see my works on&nbsp
+                            <i class="fab fa-github fa-1x"></i>                    
+                        </small>
+                    </div>
                 </div>
             </div> 
         </div>
     </section>
 
-    <footer class="footer"></footer>
+    <section class="section-contact">
+        <div class="header__section">
+            <h1 class="heading__primary">
+                <span class="heading__primary--title">Get in touch!</span>
+                <span class="heading__primary--tagline"></span>
+            </h1>
+        </div>
+        <div class="contact__container">
+            <div class="contact__link">
+                <a href="https://github.com/jasonsuk/" target="_blank" class="contact__icon"><i class="fab fa-github"></i></a>
+                <p class="contact__text">GitHub</p>
+            </div>
+            <div class="contact__link">
+                <a href="#" class="contact__icon"><i class="fab fa-google"></i></a>
+                <p class="contact__text">Gmail</p>
+            </div>
+            <div class="contact__link">
+                <a href="https://www.linkedin.com/in/junghoonsuk/" class="contact__icon"><i class="fab fa-linkedin"></i></a>
+                <p class="contact__text">Linkedin</p>
+            </div>
+            <div class="contact__link inactive">
+                <a href="#contactPopup" class="contact__icon"><i class="fab fa-instagram"></i></a>
+                <p class="contact__text">Instagram</p>
+            </div>
+            <div class="contact__link inactive">
+                <a href="#contactPopup" class="contact__icon"><i class="fab fa-facebook-square"></i></a>
+                <p class="contact__text">Facebook</p>
+            </div>            
+        </div>
+        <div class="popup hidden" id="contactPopup">            
+            <div class="popup__container">
+                <div class="popup__contents">
+                    <div class="popup__close">&times;</div>
+                    <h3 class="heading__tertiary">Sorry, I prefer to stay in touch with you on different channels...</h3>                            
+                    <p class="popup__text">How about linkedin or github?👇</p>
+                    <div class="popup__link">
+                        <a class="btn__link" href="https://www.linkedin.com/in/junghoonsuk/"><i class="fab fa-linkedin fa-3x"></i></a>    
+                        <a class="btn__link" href="https://github.com/jasonsuk/"><i class="fab fa-github fa-3x"></i></a>    
+                    </div>                       
+                </div>         
+            </div>
+        </div> 
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__para">&copy; Designed and built by Junghoon Suk (Jason)</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
