@@ -1,0 +1,16 @@
+.nav {
+
+    &__logo {
+        flex: 0 0 15%;
+        margin-right: auto;
+    }
+
+    &__music {
+        flex: 0 0 75%;
+        margin-right: auto;        
+    }
+
+    &__toggle {
+        flex: 1;
+    }
+}

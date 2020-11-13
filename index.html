@@ -12,7 +12,27 @@
 <body>
     <div class="navbar">
         <img src="" alt="Logo" class="nav__logo">
+        <div class="nav__music music">
+            <audio 
+                src="" id="musicPlayer">
+                Your browser does not support the
+                <code>audio</code> element.                
+            </audio>
+            <div class="music__btn">
+                <p class="music__title" id="musicTitle">Play a song! 
+                    <span class="music__icon">🎸</span>
+                    <span class="music__icon">🤘</span>
+                </p>
+                <i class="fas fa-play" id="musicPlayBtn"></i>
+                <i class="fas fa-stop" id="musicStopBtn"></i>
+                <i class="fas fa-random" id="musicShuffleBtn"></i>                
+                <div class="music__progress" id="musicProgress">
+                    <div class="music__progress-bar" id="musicProgressBar"></div>
+                </div>
+            </div>
+        </div>
         <div class="nav__toogle">
+            TOGGLE
             <!-- <input type="checkbox" class="nav__toggle--checkbox" id="nav__toggle">
             <label for="nav__toggle" class="nav__toggle--label">
                 <span class="nav__toggle--icon">&nbsp;</span>
@@ -301,6 +321,7 @@
         </div>
     </footer>
 
+    <script src="js/music.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

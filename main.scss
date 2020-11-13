@@ -7,10 +7,12 @@
 
 @import 'sass/component/button';
 @import 'sass/component/block';
-@import 'sass/component/card'; // flipping card
-@import 'sass/component/box'; // moving box when hovered
+@import 'sass/component/card';      // flipping card
+@import 'sass/component/box';       // moving box when hovered
 @import 'sass/component/popup';
+@import 'sass/component/music';     // music player
 
+@import 'sass/layout/navigation';
 @import 'sass/layout/grid';
 @import 'sass/layout/layout';
 

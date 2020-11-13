@@ -1,0 +1,60 @@
+.music {
+
+    width: 100%;
+    color: $color-grey-light-2;
+    font-size: $font-lg;    
+
+    &__title {
+        font-size: $default-font-size;
+        color: $color-primary-dark;
+        font-weight: 900;
+        text-transform: uppercase;
+        background-color: $color-grey-light-2;
+
+        padding: 0 1.5rem;
+    }
+
+    &__icon {
+        display: inline-block;
+        // animation: linear 1.2s infinite bounce;        
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > *:not(:last-child) {
+            margin-right: 2.5rem;
+        }
+    }
+
+    &__progress {
+        width: 20rem;
+        height: 0.5rem;
+        border-radius: 5px;
+        background-color: $color-grey-light-2;
+        // position: relative;    
+        // z-index: 1;
+    
+        &-bar {
+            width: 0%;
+            height: 100%;
+            border-radius: 5px;
+            background-color: $color-secondary-dark;
+            
+        }
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1rem);
+    }
+    100% {
+        transform: translateY(1rem);
+    }
+}
