@@ -32,7 +32,12 @@
         align-items: center;
         justify-content: space-between;
 
-        background-image: linear-gradient(105deg, rgba($color-primary-light, 0.8) 0%, rgba($color-primary, 0.8) 32.5%, rgba($color-white, 1) 32.5%);
+        background-image: 
+            linear-gradient(
+                105deg, 
+                rgba($color-primary-light, 0.8) 0%, 
+                rgba($color-primary, 0.8) 32.5%, 
+                rgba($color-white, 1) 32.5%);
         background-size: cover;
 
         color: $color-grey-light-2;
@@ -52,13 +57,19 @@
 
     &__image {
         &--1 {
-            background: url(/assets/svg/undraw_data_trends_b0wg.svg) center / contain no-repeat;        
+            background: 
+                url(/assets/svg/undraw_data_trends_b0wg.svg) 
+                center / contain no-repeat;        
         }
         &--2 {
-            background: url(/assets/svg/undraw_data_report_bi6l.svg) center / contain no-repeat;        
+            background: 
+                url(/assets/svg/undraw_data_report_bi6l.svg) 
+                center / contain no-repeat;        
         }
         &--3 {
-            background: url(/assets/svg/undraw_Artificial_intelligence_re_enpp.svg) center bottom / contain no-repeat;        
+            background: 
+                url(/assets/svg/undraw_Artificial_intelligence_re_enpp.svg) 
+                center bottom / contain no-repeat;        
         }
     }
 

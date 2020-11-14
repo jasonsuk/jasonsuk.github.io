@@ -11,11 +11,14 @@
         display: block;
         text-transform: uppercase;
         margin-bottom: 1.5rem;
+        
+        animation: cubic-bezier(1,0,0,1) 0.8s moveInRight;
     }
 
     &--tagline {
         display: block;
         font-size: $default-font-size;
+        animation: cubic-bezier(1,0,0,1) 0.8s moveInLeft;
     }
 }
 
@@ -26,7 +29,38 @@
     letter-spacing: 0.2rem;
     padding: 1.5rem auto;    
     margin-bottom: 4rem;
-    
+
+    &--title {
+        display: block;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;        
+    }
+
+    &--tagline {
+        display: block;
+        font-size: $default-font-size;
+    }
+
+    &--green:hover {
+        background-image: linear-gradient(
+            to right bottom, 
+            rgba($color-primary-light, 1)
+            , rgba($color-primary-dark, 1)
+        );
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    &--yellow:hover {
+        background-image: linear-gradient(
+            to right bottom, 
+            rgba($color-secondary-light, 1)
+            , rgba($color-secondary-dark, 1)
+        );
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
 }
 
 .heading__tertiary {
