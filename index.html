@@ -121,37 +121,42 @@
                 <span class="heading__primary--tagline">I have built some build mini applications!</span>
             </h1>
         </div>
-        <div class="block__container">                       
-            <div class="block">
-                <div class="block__fill block__image--1"></div>   
-                <h3 class="block__text">Coundown</h3>                     
+        <div class="block">                       
+            <div class="block__container">                              
+                <div class="block__fill" draggable="true" data-name="countdown">
+                    <h3 class="block__text">Coundown</h3> 
+                </div>   
             </div>
-            <div class="block">
-                <div class="block__fill block__image--2"></div>    
-                <h3 class="block__text">Speed Typer</h3>                                         
+            <div class="block__container">                
+                <div class="block__fill" draggable="true" data-name="speed-typer">
+                    <h3 class="block__text">Speed Typer</h3>                                         
+                </div>    
             </div>
-            <div class="block block__link">
-                <div class="block__fill">
-                    <i class="fa fa-plus"></i>
+            <div class="block__container larger">                
+                <h3 class="heading__tertiary">Drag & Drop a block here to see my work!</h3>      
+                <div class="block__link">
+                    <i class="fa fa-plus fa-5x"></i>                                                        
                 </div>      
-                <h3 class="block__text">Drag & Drop a block here to see my work!</h3>                                          
             </div> 
-            <div class="block">
-                <div class="block__fill block__image--3"></div>       
-                <h3 class="block__text">Hangman</h3>                                                          
+            <div class="block__container">                                                                        
+                <div class="block__fill" draggable="true" data-name="hangman">
+                    <h3 class="block__text">Hangman</h3>  
+                </div>       
             </div>                          
-            <div class="block">
-                <div class="block__fill block__image--4"></div>    
-                <h3 class="block__text">Meal finder</h3>                        
+            <div class="block__container">                 
+                <div class="block__fill" draggable="true" data-name="meal-finder">
+                    <h3 class="block__text">Meal finder</h3>  
+                </div>    
             </div>                 
         </div>     
-        <div class="popup hidden">
+        <div class="popup hidden" id="blockPopup">
             <div class="popup__container">
+                <div class="popup__close" id="popupCloseBtn">&times;</div>
                 <div class="popup__contents">
                     <h3 class="heading__tertiary">Click the link to see my work!</h3>                
-                    <a href="" class="btn btn--brand">Click Me!</a>
+                    <a href="" class="btn btn--brand" target="_blank" id="blockLinkBtn">Click Me!</a>
                     <small class="popup__text">More works available on my&nbsp;&nbsp;                     
-                        <a class="btn__link" href="https://github.com/jasonsuk"><i class="fab fa-github fa-2x"></i></a>                    
+                        <a class="btn__link" href="https://github.com/jasonsuk/frontend-dev" target="_blank"><i class="fab fa-github fa-2x"></i></a>                    
                     </small>
                 </div>
             </div>
@@ -163,8 +168,13 @@
         <div class="header__section">
             <h1 class="heading__primary">
                 <span class="heading__primary--title">Data Analytics</span>
-                <span class="heading__primary--tagline">I have created a self-taught curriclum</span>
+                <span class="heading__primary--tagline">I have created a self-taught curriculum</span>
             </h1>
+        </div>
+
+        <div class="box__desc">
+            <span><i class="fas fa-check-circle box__list--icon"></i><b> : Completed</b></span>
+            <span><i class="fas fa-arrow-circle-right box__list--icon"></i><b> : Learning in progress!</b></span>
         </div>
         
         <div class="box__container">            
@@ -192,7 +202,7 @@
                             <span class="box__list--text">The Complete Python/PostgreSQL Course 2.0 (Udemy)</span>
                         </li>                   
                     </ul>
-                    <div class="box__link">                          
+                    <div class="box__link">                                                  
                         <a href="https://github.com/jasonsuk/data-analytics/tree/master/business-analytics-projects" target="_blank" class="btn btn--brand">Click Me!</a>
                         <small class="box__text">To see my works on&nbsp
                             <i class="fab fa-github fa-1x"></i>                    
@@ -269,6 +279,10 @@
                 </div>
             </div> 
         </div>
+        <div class="box__desc">
+            <span><i class="fas fa-check-circle box__list--icon"></i><b> : Completed</b></span>
+            <span><i class="fas fa-arrow-circle-right box__list--icon"></i><b> : Learning in progress!</b></span>
+        </div>
     </section>
 
     <section class="section-contact">
@@ -284,11 +298,11 @@
                 <p class="contact__text">GitHub</p>
             </div>
             <div class="contact__link">
-                <a href="#" class="contact__icon"><i class="fab fa-google"></i></a>
+                <a href="#" target="_blank" class="contact__icon"><i class="fab fa-google"></i></a>
                 <p class="contact__text">Gmail</p>
             </div>
             <div class="contact__link">
-                <a href="https://www.linkedin.com/in/junghoonsuk/" class="contact__icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/junghoonsuk/" target="_blank" class="contact__icon"><i class="fab fa-linkedin"></i></a>
                 <p class="contact__text">Linkedin</p>
             </div>
             <div class="contact__link inactive">
@@ -303,7 +317,7 @@
         <div class="popup hidden" id="contactPopup">            
             <div class="popup__container">
                 <div class="popup__contents">
-                    <div class="popup__close">&times;</div>
+                    <div class="popup__close" id="contactCloseBtn">&times;</div>
                     <h3 class="heading__tertiary">Sorry, I prefer to stay in touch with you on different channels...</h3>                            
                     <p class="popup__text">How about linkedin or github?👇</p>
                     <div class="popup__link">
@@ -322,6 +336,7 @@
     </footer>
 
     <script src="js/music.js"></script>
+    <script src="js/dragdrop.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

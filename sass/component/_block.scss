@@ -1,84 +1,107 @@
 // WEB -> DRAG & DROP DESIGN (JS to apply)
 .block {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;     
 
     &__container {    
-        margin-top: 2.5rem;
+        // BLOCK ITEMS 
+        width: 20rem;
+        min-height: 30rem;
+        background-color: $color-secondary-light;    
+
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;        
-        }
-    
-    // BLOCK ITEMS 
-    width: 20rem;
-    min-height: 30rem;
-    background-color: $color-secondary-light;    
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-        
-    &__link {
-        margin: 4.5rem;
-        width: 25rem;
-        min-height: 40rem;
-        background-color: $color-secondary; 
-        box-shadow: $default-box-shadow;
-    }
-
-    &__text {                
-        margin-top: 2.5rem;        
-        text-align: center;        
-        color: $color-grey-dark-3;        
-        max-width: 20rem;
     }
 
     &__fill {
         width: 15rem;
         height: 15rem;
-        border-radius: 1rem;
+        // border-radius: 1rem;
         
         position: relative;
         margin-top: -3rem;         
         background-color: $color-bg;         
+    }
 
-        & > * {
-            @include centerObj;  
-            font-size: 5rem;
-            color: $color-grey-dark-3;    
+    &__text {         
+        width: 80%;
+        text-align: center;  
+        color: $color-grey-dark-3;                                
+        @include centerObj;  
+    }
+
+        
+    &__link {        
+        width: 80%;
+        height: 20rem;
+        background-color: $color-bg;     
+        
+        position: relative;
+
+        & i.fa {
+            @include centerObj;
+            color: $color-secondary-dark;
         }
     }
 
 
-    &__image {
+    // &__image {
 
-        &--1 {           
-            background: 
-                $color-white url(/assets/svg/undraw_web_developer_p3e5.svg) 
-                center / 90% 
-                no-repeat;           
-        }
-        &--2 {
-            background: 
-                $color-white url(/assets/svg/undraw_data_trends_b0wg.svg) 
-                center / 90% 
-                no-repeat;            
-        }
-        &--3 {
-            background: 
-                $color-white url(/assets/svg/undraw_Artificial_intelligence_re_enpp.svg) 
-                center / 90% 
-                no-repeat;            
-        }
-        &--4 {
-            background: 
-                $color-white url(/assets/svg/undraw_Questions_re_1fy7.svg) 
-                center / 90% 
-                no-repeat;
-        }
-
-    }
+    //     &--1 {           
+    //         background: 
+    //             $color-white url(/assets/svg/undraw_web_developer_p3e5.svg) 
+    //             center / 90% 
+    //             no-repeat;                           
+    //     }
+    
+    //     &--2 {
+    //         background: 
+    //             $color-white url(/assets/svg/undraw_data_trends_b0wg.svg) 
+    //             center / 90% 
+    //             no-repeat;            
+    //     }
+    //     &--3 {
+    //         background: 
+    //             $color-white url(/assets/svg/undraw_Artificial_intelligence_re_enpp.svg) 
+    //             center / 90% 
+    //             no-repeat;            
+    //     }
+    //     &--4 {
+    //         background: 
+    //             $color-white url(/assets/svg/undraw_Questions_re_1fy7.svg) 
+    //             center / 90% 
+    //             no-repeat;
+    //     }
+    
 }
 
+// EFFECT WHEN DRAG & DROP
+.hold {
+    border: 4px solid $color-primary-dark;
+}
+
+.hovered {
+    border-style: dashed;
+    transform: scale(1.2);
+}
+
+.larger {
+    width: 25rem;
+    min-height: 35rem;
+    box-shadow: $default-box-shadow;
+}
+
+.invisible {
+    display: none;
+}
+
+.blur {
+    opacity: 0.4;
+}
 
