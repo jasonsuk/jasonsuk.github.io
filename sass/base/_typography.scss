@@ -5,7 +5,8 @@
     width: 100%;
     padding: 1.5rem;    
     
-    background-color: $color-primary-light;
+    // background-color: $color-primary-light;
+    background-image: $gradient-primary;
 
     &--title {
         display: block;
@@ -42,21 +43,13 @@
     }
 
     &--green:hover {
-        background-image: linear-gradient(
-            to right bottom, 
-            rgba($color-primary-light, 1)
-            , rgba($color-primary-dark, 1)
-        );
+        background-image: $gradient-primary;
         -webkit-background-clip: text;
         color: transparent;
     }
 
     &--yellow:hover {
-        background-image: linear-gradient(
-            to right bottom, 
-            rgba($color-secondary-light, 1)
-            , rgba($color-secondary-dark, 1)
-        );
+        background-image: $gradient-secondary;
         -webkit-background-clip: text;
         color: transparent;
     }

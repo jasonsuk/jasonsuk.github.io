@@ -13,7 +13,7 @@
         padding: 2.5rem 1.5rem;
         display: grid;
         grid-template-row: repeat(3, 1fr);
-        grid-gap: 4.5rem;
+        grid-gap: 2.5rem;
     }
 
     &__item {
@@ -27,6 +27,7 @@
         box-shadow: $default-box-shadow;
 
         padding: 2.5rem 1.5rem;
+        color: $color-grey-light-2;
 
         display: flex;
         align-items: center;
@@ -38,9 +39,7 @@
                 rgba($color-primary-light, 0.8) 0%, 
                 rgba($color-primary, 0.8) 32.5%, 
                 rgba($color-white, 1) 32.5%);
-        background-size: cover;
-
-        color: $color-grey-light-2;
+        background-size: 100%;
 
         &:not(:last-child) {
             margin-right: 5rem;
@@ -51,8 +50,6 @@
     &__header {
         flex: 0 0 35%;   
         height: 100%;
-
-        
     }
 
     &__image {
@@ -122,7 +119,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
     }
 
     &__text {

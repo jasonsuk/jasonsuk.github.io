@@ -5,7 +5,7 @@ const closeBtn = document.getElementById('popupCloseBtn');
 const linkBtn = document.getElementById('blockLinkBtn');
 
 // When a block is dragged
-function dragStart(el) {
+function dragStart(el) {    
     el.className += ' hold';
     setTimeout(() => {
         el.className = 'invisible';
@@ -15,17 +15,19 @@ function dragStart(el) {
 }
 
 // When a block is dragged off (cancelled)
-function dragEnd(el) {
-    el.className = 'block__fill';
+function dragEnd(el, i) {
+    const index = +i + 1;
+    el.className = `block__fill block__background--${index}`;
     el.parentElement.className = 'block__container'
 }
 
 function dragOver(e) {
     e.preventDefault(); // call drop event
+    this.classList.add('hovered');
 }
+
 function dragEnter(e) {
-    e.preventDefault();    
-    console.log(this);
+    e.preventDefault();        
     // console.log(this.dataset.name);
 }
 function dragLeave() {    
@@ -41,13 +43,13 @@ function drop(e) {
 
 }
 
-for (let block of fillBlock) {
-    block.addEventListener('dragstart', (e) => {
-        dragStart(block);       
+for (let i=0; i < fillBlock.length; i++) {
+    fillBlock[i].addEventListener('dragstart', (e) => {
+        dragStart(fillBlock[i]);       
     })
 
-    block.addEventListener('dragend', (e) => {
-        dragEnd(block);
+    fillBlock[i].addEventListener('dragend', (e) => {
+        dragEnd(fillBlock[i], i);
     })
 }
 
