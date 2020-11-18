@@ -6,6 +6,7 @@
     align-items: center;
 
     margin-top: 4rem;
+    padding: 2.5rem 4.5rem;
 
     @include respond(tab-land) {        
         flex-direction: column;        
@@ -32,7 +33,8 @@
     // ABOUT DESCRIPTION
     &__desc {        
 
-        width: 65rem;
+        width: 100%;
+        max-height: 70rem;
 
         box-shadow: $default-box-shadow;        
         border-radius: 10px;        
@@ -40,7 +42,6 @@
         @include respond(tab-land) {                
             
             margin: 2.5rem auto;
-            width: 65rem;            
             box-shadow: none;
             border-radius: 0;             
         }
@@ -75,7 +76,7 @@
     &__image {        
 
         width: 100%;        
-        max-height: 50rem;
+        max-height: 55rem;
 
         object-fit: cover;
         opacity: 0.9;
@@ -90,6 +91,8 @@
     &__para {
         padding: 1.5rem 2.5rem;        
         background-color: $color-bg;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;     
     }
 }
 
@@ -97,10 +100,6 @@
 
     align-self: center;
     justify-self: center;
-
-    position: relative;    
-    -webkit-perspective: 1000;
-    perspective: 1000;
 
     width: 30rem;
     height: 30rem;   
@@ -116,7 +115,10 @@
         height: 35rem;
     }
 
-    &__side {                    
+    &__side {            
+        
+        -webkit-perspective: 1000;
+        perspective: 1000;
 
         -webkit-backface-visibility: hidden; 
         backface-visibility: hidden;
@@ -191,19 +193,19 @@
     
     // FRONT SIDE
     &__heading {    
-        @include centerObj;
-        width: 100%;                
-        padding: 0.5rem; 
-        font-size: $font-lg;
-        color: $color-grey-light-1;
-        text-align: center;            
+        width: 100%;                        
+        min-height: 7.5rem;        
+        text-align: center;
         z-index: 10;       
-        background: $gradient-primary-light;    
+        background: $gradient-primary-light;       
+        
+        position: relative;
 
-        @include respond(tab-land) {                    
-            top: 2.7rem;
-            height: 5.5rem;
-            padding: 1.5rem;
+        &--title {        
+            @include centerObj;        
+            font-size: $font-lg;
+            color: $color-grey-light-1;
+            
         }
     }
 
@@ -220,12 +222,12 @@
 
     &__para {       
         position: absolute;
-        padding: 3.5rem 2.5rem;
+        padding: 4.5rem 2.5rem;
         font-size: $default-font-size;
         color: $color-grey-light-1;  
 
         @include respond(tab-land) {                    
-            padding: 6rem 3.5rem;
+            padding: 3.5rem 3.5rem;
         }
     }
 }

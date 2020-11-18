@@ -264,7 +264,9 @@ body {
     position: relative;
     z-index: -10;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    object-fit: cover;
+    object-position: center; }
     .block__background--1 {
       background: url(./assets/web-countdown.jpg) top/cover no-repeat; }
     .block__background--2 {
@@ -301,7 +303,8 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 4rem; }
+  margin-top: 4rem;
+  padding: 2.5rem 4.5rem; }
   @media only screen and (max-width: 75em) {
     .about {
       flex-direction: column;
@@ -315,13 +318,13 @@ body {
       .about__container--right {
         width: 100%; } }
   .about__desc {
-    width: 65rem;
+    width: 100%;
+    max-height: 70rem;
     box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.4);
     border-radius: 10px; }
     @media only screen and (max-width: 75em) {
       .about__desc {
         margin: 2.5rem auto;
-        width: 65rem;
         box-shadow: none;
         border-radius: 0; } }
   .about__text {
@@ -343,7 +346,7 @@ body {
         margin-top: 2.5rem; } }
   .about__image {
     width: 100%;
-    max-height: 50rem;
+    max-height: 55rem;
     object-fit: cover;
     opacity: 0.9;
     border-top-left-radius: 10px;
@@ -353,14 +356,13 @@ body {
         display: none; } }
   .about__para {
     padding: 1.5rem 2.5rem;
-    background-color: #EFEDE8; }
+    background-color: #EFEDE8;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
 
 .card {
   align-self: center;
   justify-self: center;
-  position: relative;
-  -webkit-perspective: 1000;
-  perspective: 1000;
   width: 30rem;
   height: 30rem;
   margin: 1.5rem; }
@@ -373,6 +375,8 @@ body {
       width: 35rem;
       height: 35rem; } }
   .card__side {
+    -webkit-perspective: 1000;
+    perspective: 1000;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: relative;
@@ -414,22 +418,19 @@ body {
     .card:hover .card__side--back {
       transform: rotateY(0); } }
   .card__heading {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
-    padding: 0.5rem;
-    font-size: 2rem;
-    color: #f7f7f7;
+    min-height: 7.5rem;
     text-align: center;
     z-index: 10;
-    background: linear-gradient(to right bottom, rgba(84, 140, 47, 0.8), rgba(16, 73, 17, 0.8)); }
-    @media only screen and (max-width: 75em) {
-      .card__heading {
-        top: 2.7rem;
-        height: 5.5rem;
-        padding: 1.5rem; } }
+    background: linear-gradient(to right bottom, rgba(84, 140, 47, 0.8), rgba(16, 73, 17, 0.8));
+    position: relative; }
+    .card__heading--title {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      color: #f7f7f7; }
   .card__image {
     position: absolute;
     left: 50%;
@@ -443,12 +444,12 @@ body {
         top: 60%; } }
   .card__para {
     position: absolute;
-    padding: 3.5rem 2.5rem;
+    padding: 4.5rem 2.5rem;
     font-size: 1.6rem;
     color: #f7f7f7; }
     @media only screen and (max-width: 75em) {
       .card__para {
-        padding: 6rem 3.5rem; } }
+        padding: 3.5rem 3.5rem; } }
 
 .box__container {
   margin-top: 4.5rem;
@@ -809,7 +810,7 @@ body {
 
 .section-about {
   width: 100%;
-  min-height: 80vh;
+  min-height: 85vh;
   margin-top: 8rem;
   padding: 4.5rem 3.5rem; }
 
