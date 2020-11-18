@@ -266,13 +266,13 @@ body {
     width: 100%;
     height: 100%; }
     .block__background--1 {
-      background: url(/assets/web-countdown.jpg) top/cover no-repeat; }
+      background: url(./assets/web-countdown.jpg) top/cover no-repeat; }
     .block__background--2 {
-      background: url(/assets/web-typer.jpg) top/cover no-repeat; }
+      background: url(./assets/web-typer.jpg) top/cover no-repeat; }
     .block__background--3 {
-      background: url(/assets/web-hangman.jpg) top/cover no-repeat; }
+      background: url(./assets/web-hangman.jpg) top/cover no-repeat; }
     .block__background--4 {
-      background: url(/assets/web-meal.jpg) top/cover no-repeat; }
+      background: url(./assets/web-meal.jpg) top/cover no-repeat; }
 
 .larger {
   padding: 4.5rem 0;
@@ -794,7 +794,7 @@ body {
   width: 100%;
   margin-top: 8rem;
   height: 85vh;
-  background-image: url(/assets/emile-perron-xrVDYZRGdw4-unsplash.jpg);
+  background-image: url(./assets/emile-perron-xrVDYZRGdw4-unsplash.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;

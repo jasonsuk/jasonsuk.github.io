@@ -111,30 +111,33 @@
         width: 100%;
         height: 100%;
 
+        object-fit: cover;
+        object-position: center;
+
         &--1 {           
             background: 
-                url(/assets/web-countdown.jpg)
+                url(./assets/web-countdown.jpg)
                 top / cover
                 no-repeat;  
         }
     
         &--2 {  
             background: 
-            url(/assets/web-typer.jpg)
+            url(./assets/web-typer.jpg)
             top / cover
             no-repeat;  
         }
 
         &--3 {
             background: 
-                url(/assets/web-hangman.jpg)
+                url(./assets/web-hangman.jpg)
                 top / cover
                 no-repeat;  
         }
 
         &--4 {
             background: 
-            url(/assets/web-meal.jpg)
+            url(./assets/web-meal.jpg)
             top / cover
             no-repeat;    
         }
