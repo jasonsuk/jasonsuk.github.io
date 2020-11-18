@@ -1,43 +1,182 @@
+// ABOUT ME -> FLIPPING CARD DESIGN
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 4rem;
+
+    @include respond(tab-land) {        
+        flex-direction: column;        
+        width: 100%;
+    }
+
+    &__container {        
+        flex: 0 0 50%;
+        padding: 4.5rem;
+
+        &--left {
+            margin-right: 5.5rem;            
+        }
+
+        &--right {
+
+            @include respond(tab-land) {                           
+                width: 100%;
+            }                        
+        }
+
+    }
+
+    // ABOUT DESCRIPTION
+    &__desc {        
+
+        width: 45rem;
+
+        box-shadow: $default-box-shadow;        
+        border-radius: 10px;        
+
+        @include respond(tab-land) {                
+            
+            margin: 2.5rem auto;
+            width: 65rem;            
+            box-shadow: none;
+            border-radius: 0;             
+        }
+    }
+
+    &__text {
+        margin-top: 2.5rem;
+        margin-bottom: -2.5rem;
+        display: none;
+
+        @include respond(tab-land) {        
+            display: block;         
+        }
+    }
+
+    // CARD DISPLAY
+    &__content {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);        
+        grid-gap: 1.5rem;
+        
+        // @include respond(mobile) {        
+        //     grid-template-columns: repeat(2, 1fr);                          
+        // }
+
+        @include respond(tab-land) {        
+            width: 100%;                        
+            grid-template-columns: 1fr;            
+
+            margin-left: 0;
+            margin-top: 2.5rem; 
+        }
+    }
+
+    &__image {        
+
+        width: 100%;        
+        max-height: 50rem;
+
+        object-fit: cover;
+        opacity: 0.9;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;             
+
+        @include respond(tab-land) {        
+            display: none;
+        }
+    }
+
+    &__para {
+        padding: 1.5rem 2.5rem;
+        // background-image: $gradient-primary;
+        background-color: $color-bg;
+        // color: $color-grey-light-1;
+    }
+}
+
 .card { 
+
+    align-self: center;
+    justify-self: center;
+
     position: relative;    
     -webkit-perspective: 1000;
     perspective: 1000;
 
-    width: 25rem;
-    height: 25rem;   
-    
-    overflow: hidden;  
-    background-color: $color-bg;
-    border-radius: 15px;
-    box-shadow: $default-box-shadow;
+    width: 30rem;
+    height: 30rem;   
+    margin: 1.5rem;    
 
-    &:not(:last-child) {
-        margin-right: 2.5rem;
-        margin-bottom: 2.5rem;
+    @include respond(tab-land) {                
+        width: 100%;
+        background-color: transparent;
     }
 
-    &__side {            
-    
+    @include respond(big-desk) {
+        width: 35rem;
+        height: 35rem;
+    }
+
+    &__side {                    
+
         -webkit-backface-visibility: hidden; 
         backface-visibility: hidden;
 
-        width: 100%;
-        height: 25rem;        
-        
-        position: absolute;    
-        display: flex;
-        justify-content: center;    
-        align-items: center;
+        position: relative;
 
+        overflow: hidden;  
         border-radius: 15px;
+        box-shadow: $default-box-shadow;
+    
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;        
 
-        transition: all 0.6s ease-out 0.2s;
+        transition: all 0.6s ease-in-out 0.2s;   
 
-        &--back {    
-            transform: rotateY(180deg);         
-            text-align: left;         
-            padding: 0 1.5rem;      
+        &--front,
+        &--back {
+            -webkit-backface-visibility: hidden; 
+            backface-visibility: hidden;
+            
+            position: absolute; 
+            width: 100%;
+            height: 100%;
         }
+
+        &--front {
+            transform: rotateY(0deg);       
+        }
+
+        &--back {                   
+            background-color: $color-primary-light;
+            transform: rotateY(180deg);                     
+        }
+
+        @include respond(tab-land) {
+            display: flex;        
+
+            &--front,
+            &--back {
+
+                -webkit-backface-visibility: visible; 
+                backface-visibility: visible;
+
+                transform: rotateY(0deg);  
+                position: relative;
+                display: inline-block;
+            }
+
+            &:hover {                
+                transform: scale(1.05);
+            }
+        }
+
     }
                     
     &:hover &__side--front {
@@ -47,25 +186,53 @@
     &:hover &__side--back {
         transform: rotateY(0);
     }
+
+    @include respond(tab-land) {
+        &:hover &__side--front,
+        &:hover &__side--back {
+            transform: rotateY(0);
+        }
+    }
+
     
+    // FRONT SIDE
     &__heading {    
-        width: 90%;             
-        color: $color-grey-light-1;
-        text-align: center;    
-        z-index: 100;       
-        // background: $color-primary-dark;     
-        background-image: $gradient-primary;
-    }
-
-    &__para {    
-        color: $color-grey-light-1;
-        text-align: center;    
-        z-index: 100;               
-    }
-
-    &__image {
-        position: absolute;
-        opacity: 0.6;
+        @include centerObj;
         width: 100%;
+        padding: 0.5rem; 
+        font-size: $font-lg;
+        color: $color-grey-light-1;
+        text-align: center;            
+        z-index: 10;       
+        background-image: $gradient-primary;    
+
+        @include respond(tab-land) {                    
+            top: 2.7rem;
+            height: 5.5rem;
+            padding: 1.5rem;
+        }
+    }
+
+    &__image {                
+        @include centerObj;
+        opacity: 0.6;
+        width: 90%;    
+        min-height: 90%;    
+        background-color: $color-bg;
+
+        @include respond(tab-land) {                    
+            top: 60%;
+        }
+    }
+
+    &__para {       
+        position: absolute;
+        padding: 3.5rem 2.5rem;
+        font-size: $default-font-size;
+        color: $color-grey-light-1;  
+
+        @include respond(tab-land) {                    
+            padding: 6rem 3.5rem;
+        }
     }
 }

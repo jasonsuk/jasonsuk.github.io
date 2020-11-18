@@ -18,40 +18,45 @@
 
     &--tagline {
         display: block;
-        font-size: $default-font-size;
+        font-size: $font-lg;
         animation: cubic-bezier(1,0,0,1) 0.8s moveInLeft;
     }
 }
 
 .heading__secondary {
-    
     color: $color-grey-dark-3;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     padding: 1.5rem auto;    
-    margin-bottom: 4rem;
+        
 
-    &--title {
+    &--title {       
+        margin: 4rem 0;
+        padding: 0.5rem;         
         display: block;
         text-transform: uppercase;
-        margin-bottom: 0.5rem;        
+        margin-bottom: 2.5rem;        
+        font-size: 3.5rem; 
     }
 
     &--tagline {
         display: block;
-        font-size: $default-font-size;
+        font-size: $font-lg;
     }
 
-    &--green:hover {
+    &--green:hover {        
         background-image: $gradient-primary;
         -webkit-background-clip: text;
         color: transparent;
+        display:inline-block;
     }
 
     &--yellow:hover {
         background-image: $gradient-secondary;
         -webkit-background-clip: text;
         color: transparent;
+        display:inline-block;
+        min-height: 5.5rem; 
     }
 
 }
@@ -60,10 +65,11 @@
     
     color: $color-grey-dark-3;
     text-transform: uppercase;
+    font-size: $font-lg;
+    font-weight: 700;
     text-align: center;
     letter-spacing: 0.2rem;
-    padding: 1.5rem auto;    
-    margin-bottom: 2rem;
-    
+    padding: 1.5rem 0.5rem;    
+    margin-bottom: 3.5rem;    
 }
 

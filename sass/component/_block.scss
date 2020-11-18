@@ -1,31 +1,32 @@
 // WEB -> DRAG & DROP DESIGN (JS to apply)
-.block {
-    margin-top: 2.5rem;
-    display: flex;
-    flex-wrap: wrap;
+.block {       
+    margin-top: 8rem;     
+
+    display: flex;    
     justify-content: space-between;
     align-items: center;     
 
     &__container {    
         // BLOCK ITEMS 
-        width: 22rem;
+        width: 20rem;
         min-height: 30rem;
-        background-color: $color-secondary-light;    
+        background-color: $color-bg; 
+        border-radius: 10px;           
 
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
     }
 
     &__fill {
-        width: 20rem;
-        height: 20rem;
-        // border-radius: 1rem;
+        width: 18rem;
+        height: 18rem;
+        border-radius: 10px;    
+        box-shadow: $box-shadow-light;
         
-        position: relative;
-        margin-top: -3rem;         
-        background-color: $color-bg;
+        position: relative;        
         opacity: 0.8;
         
         &:hover {
@@ -44,14 +45,42 @@
     &__link {        
         width: 80%;
         height: 20rem;
-        background-color: $color-bg;     
+        background-color: $color-secondary-dark;     
+        border-radius: 10px;              
         
         position: relative;
         z-index: 100;
 
         & i.fa {
             @include centerObj;
-            color: $color-secondary-dark;            
+            color: $color-secondary-light;            
+        }
+
+
+        @include respond(tab-land) {
+
+            &__container {
+                width: 15rem;
+                min-height: 20rem;
+            }
+
+            &__fill {
+                width: 12rem;
+                height: 12rem;
+            }    
+        }
+
+        @include respond(big-desk) {
+
+            &__container {
+                width: 25rem;
+                min-height: 30rem;
+            }
+
+            &__fill {
+                width: 22rem;
+                height: 22rem;
+            }            
         }
     }
 
@@ -90,6 +119,15 @@
     }
 }
 
+// MAKE THE LINK BLOCK LARGER
+.larger {
+    padding: 4.5rem 0;
+    width: 25rem;
+    min-height: 35rem;
+    box-shadow: $default-box-shadow;
+}
+
+
 // EFFECT WHEN DRAG & DROP
 .hold {
     border: 4px solid $color-secondary-dark;
@@ -98,12 +136,6 @@
 .hovered {
     border-style: dashed;
     transform: scale(1.2);
-}
-
-.larger {
-    width: 25rem;
-    min-height: 35rem;
-    box-shadow: $default-box-shadow;
 }
 
 .invisible {
