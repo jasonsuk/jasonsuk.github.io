@@ -32,7 +32,7 @@
     // ABOUT DESCRIPTION
     &__desc {        
 
-        width: 45rem;
+        width: 65rem;
 
         box-shadow: $default-box-shadow;        
         border-radius: 10px;        
@@ -62,10 +62,6 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);        
         grid-gap: 1.5rem;
-        
-        // @include respond(mobile) {        
-        //     grid-template-columns: repeat(2, 1fr);                          
-        // }
 
         @include respond(tab-land) {        
             width: 100%;                        
@@ -92,10 +88,8 @@
     }
 
     &__para {
-        padding: 1.5rem 2.5rem;
-        // background-image: $gradient-primary;
+        padding: 1.5rem 2.5rem;        
         background-color: $color-bg;
-        // color: $color-grey-light-1;
     }
 }
 
@@ -198,13 +192,13 @@
     // FRONT SIDE
     &__heading {    
         @include centerObj;
-        width: 100%;
+        width: 100%;                
         padding: 0.5rem; 
         font-size: $font-lg;
         color: $color-grey-light-1;
         text-align: center;            
         z-index: 10;       
-        background-image: $gradient-primary;    
+        background: $gradient-primary-light;    
 
         @include respond(tab-land) {                    
             top: 2.7rem;
@@ -217,8 +211,7 @@
         @include centerObj;
         opacity: 0.6;
         width: 90%;    
-        min-height: 90%;    
-        background-color: $color-bg;
+        min-height: 90%;            
 
         @include respond(tab-land) {                    
             top: 60%;

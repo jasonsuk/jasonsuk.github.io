@@ -17,9 +17,10 @@
 
     width: 100%;
     margin-top: 8rem;
-    height: 85vh;
+    height: 85vh;    
     
-    background-image: url(..//assets/diary2-kelly-sikkema-unsplash.jpg);
+    background-image:                 
+        url(/assets/emile-perron-xrVDYZRGdw4-unsplash.jpg);
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -30,8 +31,9 @@
     &__main {
         position: absolute;
         left: 50%;
-        top: 45%;
+        top: 25%;
         transform: translate(-50%, -50%);
+        width: 100%;
     }
 }
 
@@ -47,12 +49,7 @@
     padding: 4.5rem 3.5rem;
     min-height: 95vh;
 
-    // background-color: $color-white; 
-    background-image: linear-gradient(
-        to right bottom, 
-        rgba($color-primary-light, 0.9)
-        , rgba($color-primary, 0.9)
-    );
+    background-image: $gradient-primary-light;
 }
 
 .section-data {
@@ -90,20 +87,30 @@
     &__container {
 
         @include centerObj;
-        margin-top: 3.5rem;
+        
+        margin-top: 4rem;
+        padding: 2.5rem;
 
-        display: flex;
-        justify-content: space-around;
+        display: flex;        
+        justify-content: space-between;
         align-items: center;
+
+        @include respond(mobile) {            
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 80%;
+        }
     }
 
     &__link {
         text-align: center;
         position: relative;
-
-        &:not(:last-child) {
-            margin-right: 5rem;    
-        }     
+        
+        margin-right: 4.5rem;
+    
+        @include respond(tab-land) {            
+            margin-bottom: 4.5rem;
+        }           
     }
 
     &__icon {

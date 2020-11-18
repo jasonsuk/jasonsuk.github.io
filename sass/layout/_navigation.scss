@@ -1,13 +1,14 @@
 .navbar {
 
-    &__logo {
-        flex: 0 0 15%;
-        margin-right: auto;
-    }
+    // &__logo {
+    //     flex: 0 0 15%;
 
-    &__music {
+    // }
+
+    &__music {    
         flex: 0 0 75%;
         margin-right: auto;        
+        margin-left: 0.5rem;
     }
 }
 
