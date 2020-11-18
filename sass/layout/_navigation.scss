@@ -72,11 +72,11 @@
 
     &__checkbox:checked ~ &__label &__icon {background-color: transparent;}
     &__checkbox:checked ~ &__label &__icon::before {
-        top: 0.1rem;
+        top: 0rem;
         transform: rotate(45deg);
     }
     &__checkbox:checked ~ &__label &__icon::after {
-        top: 0.1rem;
+        top: 0rem;
         transform: rotate(-45deg);
     }
 

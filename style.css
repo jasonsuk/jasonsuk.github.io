@@ -139,14 +139,11 @@ body {
   .heading__secondary--green:hover {
     background-image: linear-gradient(to right bottom, #548c2f, #104911);
     -webkit-background-clip: text;
-    color: transparent;
-    display: inline-block; }
+    color: transparent; }
   .heading__secondary--yellow:hover {
     background-image: linear-gradient(to right bottom, #fcf4a3, #ffc30b);
     -webkit-background-clip: text;
-    color: transparent;
-    display: inline-block;
-    min-height: 5.5rem; }
+    color: transparent; }
 
 .heading__tertiary {
   color: #333;
@@ -195,6 +192,9 @@ body {
   grid-gap: 2.5rem;
   justify-content: center;
   align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .block {
+      padding: 1.5rem; } }
   @media only screen and (max-width: 75em) {
     .block {
       grid-template-columns: 1fr; } }
@@ -211,6 +211,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+    @media only screen and (max-width: 37.5em) {
+      .block__container {
+        margin-right: 0; } }
     @media only screen and (max-width: 75em) {
       .block__container {
         width: 100%; }
@@ -275,6 +278,10 @@ body {
       background: url(./assets/web-hangman.jpg) top/cover no-repeat; }
     .block__background--4 {
       background: url(./assets/web-meal.jpg) top/cover no-repeat; }
+  .block__message {
+    text-align: center;
+    color: #f7f7f7;
+    margin-top: 6rem; }
 
 .larger {
   padding: 4.5rem 0;
@@ -283,7 +290,8 @@ body {
   box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.4); }
   @media only screen and (max-width: 75em) {
     .larger {
-      width: 100%; } }
+      width: 100%;
+      display: none; } }
 
 .hold {
   border: 4px solid #ffc30b; }
@@ -313,13 +321,13 @@ body {
     flex: 0 0 50%;
     padding: 4.5rem; }
     .about__container--left {
-      margin-right: 5.5rem; }
+      margin-right: 4.5rem; }
     @media only screen and (max-width: 75em) {
       .about__container--right {
         width: 100%; } }
   .about__desc {
     width: 100%;
-    max-height: 70rem;
+    max-height: 65rem;
     box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.4);
     border-radius: 10px; }
     @media only screen and (max-width: 75em) {
@@ -346,7 +354,7 @@ body {
         margin-top: 2.5rem; } }
   .about__image {
     width: 100%;
-    max-height: 55rem;
+    max-height: 45rem;
     object-fit: cover;
     opacity: 0.9;
     border-top-left-radius: 10px;
@@ -357,8 +365,10 @@ body {
   .about__para {
     padding: 1.5rem 2.5rem;
     background-color: #EFEDE8;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px; }
+    text-align: left; }
+    .about__para:last-child {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px; }
 
 .card {
   align-self: center;
@@ -398,6 +408,12 @@ body {
     .card__side--back {
       background-color: #548C2F;
       transform: rotateY(180deg); }
+    @media only screen and (max-width: 37.5em) {
+      .card__side {
+        display: flex;
+        flex-direction: column; }
+        .card__side--back {
+          overflow: scroll; } }
     @media only screen and (max-width: 75em) {
       .card__side {
         display: flex; }
@@ -680,11 +696,11 @@ body {
   background-color: transparent; }
 
 .nav__checkbox:checked ~ .nav__label .nav__icon::before {
-  top: 0.1rem;
+  top: 0rem;
   transform: rotate(45deg); }
 
 .nav__checkbox:checked ~ .nav__label .nav__icon::after {
-  top: 0.1rem;
+  top: 0rem;
   transform: rotate(-45deg); }
 
 .nav__background {
@@ -844,11 +860,7 @@ body {
   z-index: -1; }
 
 .contact__container {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: 4rem;
+  margin: 20rem auto;
   padding: 2.5rem;
   display: flex;
   justify-content: space-between;
@@ -857,12 +869,12 @@ body {
     .contact__container {
       flex-wrap: wrap;
       justify-content: center;
-      width: 80%; } }
+      align-items: center; } }
 
 .contact__link {
-  text-align: center;
-  position: relative;
-  margin-right: 4.5rem; }
+  text-align: center; }
+  .contact__link:not(:last-child) {
+    margin-right: 3.5rem; }
   @media only screen and (max-width: 75em) {
     .contact__link {
       margin-bottom: 4.5rem; } }
@@ -895,3 +907,8 @@ body {
   color: #f7f7f7;
   text-align: center;
   background-color: #333; }
+
+@media only screen and (max-width: 37.5em) {
+  [class*='section-'] {
+    min-height: 85vh;
+    padding: 4rem 0.5rem; } }

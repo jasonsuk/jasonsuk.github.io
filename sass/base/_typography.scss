@@ -26,36 +26,33 @@
     color: $color-grey-dark-3;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    padding: 1.5rem auto;    
-        
+    padding: 1.5rem auto;       
+    
 
-    &--title {       
+    &--title {           
         margin: 4rem 0;
         padding: 0.5rem;         
         display: block;
         text-transform: uppercase;
         margin-bottom: 2.5rem;        
-        font-size: 3.5rem; 
+        font-size: 3.5rem;                  
     }
 
     &--tagline {
         display: block;
-        font-size: $font-lg;
+        font-size: $font-lg;             
     }
 
     &--green:hover {        
         background-image: $gradient-primary;
         -webkit-background-clip: text;
-        color: transparent;
-        display:inline-block;
+        color: transparent;        
     }
 
     &--yellow:hover {
         background-image: $gradient-secondary;
         -webkit-background-clip: text;
         color: transparent;
-        display:inline-block;
-        min-height: 5.5rem; 
     }
 
 }

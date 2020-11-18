@@ -57,6 +57,9 @@ for (let i=0; i < fillBlock.length; i++) {
 function hidePopup() {    
     blockPopup.classList.remove('show');
     blockPopup.classList.add('hidden');
+
+    // remove the border in the link block (.hover class)
+    linkBlock.classList.remove('hovered');
 }
 
 // Load a project link

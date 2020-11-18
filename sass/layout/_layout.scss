@@ -64,9 +64,9 @@
     margin-top: 8rem;
     padding: 4.5rem 6.5rem;
     min-height: 85vh;
-    // background-color: $color-bg; 
 
     position: relative;
+
 }
 
 .contact {
@@ -86,10 +86,8 @@
 
     &__container {
 
-        @include centerObj;
-        
-        margin-top: 4rem;
-        padding: 2.5rem;
+        margin: 20rem auto; 
+        padding: 2.5rem;        
 
         display: flex;        
         justify-content: space-between;
@@ -98,16 +96,19 @@
         @include respond(mobile) {            
             flex-wrap: wrap;
             justify-content: center;
-            width: 80%;
+            align-items: center;                                
         }
+        
     }
 
     &__link {
-        text-align: center;
-        position: relative;
         
-        margin-right: 4.5rem;
-    
+        text-align: center; 
+        
+        &:not(:last-child) {
+            margin-right: 3.5rem;
+        }
+            
         @include respond(tab-land) {            
             margin-bottom: 4.5rem;
         }           
@@ -115,7 +116,8 @@
 
     &__icon {
         font-size: 10rem;
-        color: $color-primary;
+        
+        color: $color-primary;        
 
         &:hover {
             color: $color-primary-dark;
@@ -158,3 +160,9 @@
 }
 
 
+@include respond(mobile) {
+    [class*='section-'] {
+        min-height: 85vh;
+        padding: 4rem 0.5rem;
+    }
+}
