@@ -25,6 +25,32 @@
         align-items: center;
     }
 
+
+    &--left,
+    &--right {
+        @include respond(mobile) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &--center {
+        @include respond(mobile) {
+            width: 0;
+            height: 0;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    &--right {
+        @include respond(mobile) {
+            margin-top: -5rem;
+        }
+    }
+
     &__container {    
         // BLOCK ITEMS 
         width: 20rem;
@@ -37,16 +63,14 @@
         justify-content: center;
         align-items: center;
 
+
+
+        @include respond(tab-land) {            
+            width: 30rem;
+        }        
         @include respond(mobile) {
-            margin-right: 0;            
-        }
-
-        @include respond(tab-land) {
-            width: 100%;
-
-            &:not(:last-child) {
-                margin-right: 4.5rem;
-            }
+            background-color: transparent;            
+            
         }
 
     }
@@ -64,15 +88,9 @@
             opacity: 1;
         }
 
-
-        @include respond(tab-port) {                    
-            transform: scale(1);
-        }
-
         @include respond(tab-land) {                    
             transform: scale(1.3);
         }
-        
     }
 
     &__text {         
@@ -81,6 +99,7 @@
         color: $color-grey-dark-3;    
         background-color: $color-secondary-dark;                                
         @include centerObj;  
+
     }
         
     &__link {        
@@ -157,6 +176,16 @@
         color: $color-grey-light-1;
         
         margin-top: 6rem;
+        display: none;
+
+        @include respond(tab-land) {
+            display: block;
+        }
+
+        @include respond(mobile) {
+            margin: 4rem 2.5rem;
+        }
+        
     }
 }
 
@@ -168,7 +197,9 @@
     box-shadow: $default-box-shadow;
 
     @include respond(tab-land) {
-        width: 100%;       
+        width: 0;     
+        height: 0;  
+        padding: 0;
         display: none; 
     }
 }

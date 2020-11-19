@@ -135,7 +135,8 @@ body {
     font-size: 3.5rem; }
   .heading__secondary--tagline {
     display: block;
-    font-size: 2rem; }
+    font-size: 2rem;
+    margin-left: 0.5rem; }
   .heading__secondary--green:hover {
     background-image: linear-gradient(to right bottom, #548c2f, #104911);
     -webkit-background-clip: text;
@@ -202,6 +203,21 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .block--left, .block--right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; } }
+  @media only screen and (max-width: 37.5em) {
+    .block--center {
+      width: 0;
+      height: 0;
+      margin: 0;
+      padding: 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .block--right {
+      margin-top: -5rem; } }
   .block__container {
     width: 20rem;
     min-height: 30rem;
@@ -211,14 +227,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-    @media only screen and (max-width: 37.5em) {
-      .block__container {
-        margin-right: 0; } }
     @media only screen and (max-width: 75em) {
       .block__container {
-        width: 100%; }
-        .block__container:not(:last-child) {
-          margin-right: 4.5rem; } }
+        width: 30rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .block__container {
+        background-color: transparent; } }
   .block__fill {
     width: 18rem;
     height: 18rem;
@@ -228,9 +242,6 @@ body {
     opacity: 0.8; }
     .block__fill:hover {
       opacity: 1; }
-    @media only screen and (max-width: 56.25em) {
-      .block__fill {
-        transform: scale(1); } }
     @media only screen and (max-width: 75em) {
       .block__fill {
         transform: scale(1.3); } }
@@ -281,7 +292,14 @@ body {
   .block__message {
     text-align: center;
     color: #f7f7f7;
-    margin-top: 6rem; }
+    margin-top: 6rem;
+    display: none; }
+    @media only screen and (max-width: 75em) {
+      .block__message {
+        display: block; } }
+    @media only screen and (max-width: 37.5em) {
+      .block__message {
+        margin: 4rem 2.5rem; } }
 
 .larger {
   padding: 4.5rem 0;
@@ -290,7 +308,9 @@ body {
   box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.4); }
   @media only screen and (max-width: 75em) {
     .larger {
-      width: 100%;
+      width: 0;
+      height: 0;
+      padding: 0;
       display: none; } }
 
 .hold {
@@ -313,6 +333,9 @@ body {
   align-items: center;
   margin-top: 4rem;
   padding: 2.5rem 4.5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .about {
+      padding: 0; } }
   @media only screen and (max-width: 75em) {
     .about {
       flex-direction: column;
@@ -378,7 +401,11 @@ body {
   margin: 1.5rem; }
   @media only screen and (max-width: 75em) {
     .card {
+      height: 50rem; } }
+  @media only screen and (max-width: 75em) {
+    .card {
       width: 100%;
+      height: 40rem;
       background-color: transparent; } }
   @media only screen and (min-width: 112.5em) {
     .card {
@@ -495,6 +522,10 @@ body {
       height: 100%;
       padding: 2.5rem;
       background-image: linear-gradient(180deg, rgba(84, 140, 47, 0.8) 0%, rgba(44, 95, 45, 0.8) 32.5%, white 32.5%); } }
+  @media only screen and (max-width: 37.5em) {
+    .box__item {
+      min-height: 65rem;
+      background-image: linear-gradient(180deg, rgba(84, 140, 47, 0.8) 0%, rgba(44, 95, 45, 0.8) 30%, white 30%); } }
 
 .box__header {
   flex: 0 0 35%;
@@ -511,7 +542,8 @@ body {
 .box__tagline {
   background: #104911;
   text-transform: lowercase;
-  padding: 0.2rem 0.5rem; }
+  padding: 0.2rem 0.5rem;
+  margin-top: 1.5rem; }
 
 .box__content {
   display: flex;
@@ -522,6 +554,9 @@ body {
       padding: 1.5rem;
       display: flex;
       flex-direction: column; } }
+  @media only screen and (max-width: 37.5em) {
+    .box__content {
+      margin-top: 5.5rem; } }
 
 .box__list {
   flex: 0 0 70%;
@@ -547,6 +582,9 @@ body {
   @media only screen and (max-width: 75em) {
     .box__link {
       margin: 2.5rem auto; } }
+  @media only screen and (max-width: 37.5em) {
+    .box__link {
+      margin-top: 5.5rem; } }
 
 .box__text {
   text-transform: lowercase; }
@@ -556,6 +594,10 @@ body {
   text-align: center; }
   .box__desc > *:not(:last-child) {
     margin-right: 5rem; }
+  .box__desc > * {
+    display: block;
+    text-align: left;
+    margin-left: 7.5rem; }
 
 .popup {
   position: fixed;
@@ -878,6 +920,9 @@ body {
   @media only screen and (max-width: 75em) {
     .contact__link {
       margin-bottom: 4.5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .contact__link:nth-of-type(1) {
+      margin-left: 3.5rem; } }
 
 .contact__icon {
   font-size: 10rem;
