@@ -13,23 +13,26 @@
 }
 
 .nav {
+    position: fixed;
+    top: 0rem;
+    right: 0rem;    
 
     &__checkbox {
-        position: fixed;
+        position: absolute;
         top: 2rem;
         right: 3rem;
         display: none;
     }
 
     &__label {
-        position: fixed;
+        position: absolute;
         top: 0.5rem;
         right: 1.5rem;
         background-color: $color-white;
         z-index: 3000;
         width: 4.5rem;
         height: 4.5rem;
-        border-radius: 50%;
+        border-radius: 50%;        
     }
 
     &__icon {
@@ -46,8 +49,7 @@
             left: 1rem;
             background-color: $color-primary-light;
             border-radius: 1rem;
-            transition: all 0.2s;
-            
+            transition: all 0.2s;            
         }
 
         &::before,
@@ -66,6 +68,24 @@
         }
     }
 
+
+    @include respond(mobile) {
+        top: 5.5rem;     
+        
+        &__label {
+            background: $color-primary;
+        }
+
+        &__icon {
+
+            &,
+            &:before,
+            &:after {
+                background-color: $color-bg;
+            }
+        }
+    }
+
     &__label:hover &__icon::before { top: -1.2rem; }
     &__label:hover &__icon::after { top: 1.2rem; }
 
@@ -81,7 +101,7 @@
     }
 
     &__background {
-        position: fixed;
+        position: absolute;
         top: 1rem;
         right: 2rem;
         background-image: 
