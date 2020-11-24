@@ -1,5 +1,7 @@
 ## My first website!
 
+### Website address here : https://jasonsuk.github.io/
+
 Welcome to my very first landing page! I built this one page website from stratch to cover up key objective that I set!
 
 Firstly, it is mid-November 2020 when I am writing this README.md, roughly 2 months and a half through my web developer journey. I thought it was a perfect time to consolidate and use the basic stacks of skills that I learned 🚀🚀! Moving forward, I will move my focus on learning MERN stack. The skills that I showcased in this website **-html, css(compiled from sass) and javascript-** will surely be wonderful foundations!
